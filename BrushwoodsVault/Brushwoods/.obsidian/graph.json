@@ -1,0 +1,44 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "Biome",
+      "color": {
+        "a": 1,
+        "rgb": 7218614
+      }
+    },
+    {
+      "query": "Mob",
+      "color": {
+        "a": 1,
+        "rgb": 6731263
+      }
+    },
+    {
+      "query": "Material",
+      "color": {
+        "a": 1,
+        "rgb": 12705874
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": -1.2,
+  "nodeSizeMultiplier": 1.12083333333333,
+  "lineSizeMultiplier": 1.88645833333333,
+  "collapse-forces": false,
+  "centerStrength": 0.229166666666667,
+  "repelStrength": 8.125,
+  "linkStrength": 0.776041666666667,
+  "linkDistance": 241,
+  "scale": 1.0000000000000042,
+  "close": true
+}

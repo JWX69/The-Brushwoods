@@ -1,0 +1,3 @@
+Welcome to the Brushwoods, a dimension where nature reigns supreme. As you step into this mystical realm, you'll find yourself surrounded by a lush and vibrant landscape, teeming with life. The entire dimension is draped in a thick carpet of intertwining purple roots, giving the ground a surreal and otherworldly appearance.
+
+The Brushwoods are home to an array of mysterious creatures deeply connected with nature. Harmoniously coexisting with their environment, these creatures exhibit a wide range of fascinating traits. Such as the elegant Woodland Sprites that gracefully glide through the air.

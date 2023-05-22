@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "brushwoods:block/large_agaricus_bottom"
+  },
+  "render_type": "cutout"
+}
