@@ -1,3 +1,6 @@
 {
-  "accentColor": ""
+  "accentColor": "#f042b9",
+  "baseFontSize": 15,
+  "translucency": true,
+  "cssTheme": "Encore"
 }

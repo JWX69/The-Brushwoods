@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "brushwoods:block/infection_vines"
-  },
-  "render_type": "cutout"
-}

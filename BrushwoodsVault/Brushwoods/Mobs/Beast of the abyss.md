@@ -1,6 +1,7 @@
 #mob 
-This beast lurks in the fog of the [[Veiled Abyss]] and looks reminiscent of a hyena. Its eyes glow as it watches you from the fog ready to strike
+This beast lurks in the fog of the [[Veiled Abyss]]. The beast isnt real
 
-Behavior : 
+![[Pasted image 20231104234925.png]]
 
-![[beast of the abyss.png]]
+- False Goat
+there will be a goat in the veiled abyss making people have a sense of false hoap

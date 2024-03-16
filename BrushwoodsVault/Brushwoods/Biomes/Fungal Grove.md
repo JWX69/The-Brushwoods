@@ -1,0 +1,2 @@
+#biome 
+The fungal grove found in the [[Brushwoods Dimension]] consists of large mushroom "trees" and large shelf mushrooms on hills that can be used to for climbing on if they are on the smaller side or even for building on if they are large enough 

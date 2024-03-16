@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "7d9f3d5d77811f14",
+        "id": "d762c10fea1efdd5",
         "type": "tabs",
         "children": [
           {
-            "id": "9a2f627fc671c719",
+            "id": "65b291b31396bd2e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Brushwoods/Brushwoods Dimension.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 259
   },
   "right": {
     "id": "4fac62daf78ccd39",
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Brushwoods/Brushwoods Dimension.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Brushwoods/Brushwoods Dimension.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,15 +124,28 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Brushwoods/Brushwoods Dimension.md"
+              }
+            }
+          },
+          {
+            "id": "2a84dc57db4e6433",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -138,9 +157,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9a2f627fc671c719",
+  "active": "65b291b31396bd2e",
   "lastOpenFiles": [
-    "2023-05-21.md",
-    "Brushwoods/Mobs/Dull Sprite.md"
+    "Brushwoods/Materials/Gloomstone.md",
+    "Brushwoods/Orbit.md",
+    "Brushwoods/Biomes/Rooted Enclave.md",
+    "Brushwoods/Biomes/Fungal Grove.md",
+    "Brushwoods/Features/Augment Table.canvas",
+    "model.gif",
+    "Brushwoods/Brushwoods Dimension.md",
+    "Brushwoods/Biomes/Veiled Abyss.md",
+    "Brushwoods/Mobs/Woodland Sprite.md",
+    "Brushwoods/Mobs/Dull Sprite.md",
+    "Brushwoods/Biomes/Verdant Canopy.md",
+    "Brushwoods/Biomes/Shadowsludge Grotto.md",
+    "Brushwoods/Biomes/Submerged Meadow.md",
+    "Brushwoods/Mobs/Beast of the abyss.md",
+    "Brushwoods/Biomes/Shadowsludge Marsh.md",
+    "Brushwoods/Features/Shroudpods.md",
+    "Brushwoods/Features/Augment Table.md",
+    "Brushwoods/Materials/Elm Wood.md",
+    "Brushwoods/Mobs/Poddle.md",
+    "Brushwoods/Images/Pasted image 20240223220511.png",
+    "Shroudpod.md",
+    "things.md",
+    "Brushwoods/Materials/Shadowroot.md",
+    "Brushwoods/Materials/Shade Crystals.md",
+    "Items/Shroud Sak.md",
+    "Items",
+    "Brushwoods/Images/Shroud Sak.png",
+    "Brushwoods/Images/Shade Crystal.png",
+    "Pasted image 20231224171850.png",
+    "Brushwoods/Images/Pasted image 20231224170236.png",
+    "Brushwoods/Images/Pasted image 20231224170052.png",
+    "Pasted image 20231224165936.png",
+    "Brushwoods/Images/Pasted image 20231224005726.png",
+    "Brushwoods/Images/Pasted image 20231224004604.png",
+    "Brushwoods/Materials/Ashwood.md",
+    "Brushwoods/Materials/Silt.md",
+    "Brushwoods/Features",
+    "2023-05-21.md"
   ]
 }

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "brushwoods:block/gloomstone_top",
-    "side": "brushwoods:block/gloomstone"
-  }
-}

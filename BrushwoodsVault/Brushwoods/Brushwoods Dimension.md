@@ -1,3 +1,11 @@
-Welcome to the Brushwoods, a dimension where nature reigns supreme. As you step into this mystical realm, you'll find yourself surrounded by a lush and vibrant landscape, teeming with life. The entire dimension is draped in a thick carpet of intertwining purple roots, giving the ground a surreal and otherworldly appearance.
+![[title.png]]
+Welcome to the Brushwoods, a dimension where nature reigns supreme. As you step into this mystical realm, you'll find yourself surrounded by a landscape teeming with life, mostly...
 
-The Brushwoods are home to an array of mysterious creatures deeply connected with nature. Harmoniously coexisting with their environment, these creatures exhibit a wide range of fascinating traits. Such as the elegant Woodland Sprites that gracefully glide through the air.
+**Day Night Cycle:**
+	In the Brushwoods there isn't a sun, just two moons. In the "day" the present moon is larger and brighter in the sky, at "night" time the moon is smaller and dimmer.
+**Luma:** 
+	The larger and brighter moon that dominates the sky during the day.
+	![[Pasted image 20231224170052.png]]
+**Umbra:**
+	The smaller and dimmer moon that graces the night sky.
+	![[Pasted image 20231224170236.png]]

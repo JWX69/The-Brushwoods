@@ -1,3 +1,3 @@
 #material
-Gloomstone is the main stonetype found in the brushwoods
-![[gloomstone.png]]
+Gloomstone
+![[Pasted image 20230816120457.png]]

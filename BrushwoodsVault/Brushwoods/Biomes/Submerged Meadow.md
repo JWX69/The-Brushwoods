@@ -1,0 +1,1 @@
+The submerged meadow is found in the lakes of the [[Brushwoods Dimension]]. In these biomes you can find quite the collection of aquatic plants and animals.

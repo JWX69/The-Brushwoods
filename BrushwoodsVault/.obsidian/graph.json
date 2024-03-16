@@ -4,8 +4,8 @@
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
-  "showOrphans": true,
-  "collapse-color-groups": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "Biome",
@@ -18,7 +18,7 @@
       "query": "Mob",
       "color": {
         "a": 1,
-        "rgb": 3907048
+        "rgb": 7137022
       }
     },
     {
@@ -27,18 +27,25 @@
         "a": 1,
         "rgb": 11657298
       }
+    },
+    {
+      "query": "Feature",
+      "color": {
+        "a": 1,
+        "rgb": 14580795
+      }
     }
   ],
   "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": 0,
+  "textFadeMultiplier": 0.2,
   "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
-  "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
+  "lineSizeMultiplier": 2.26927083333333,
+  "collapse-forces": false,
+  "centerStrength": 0.166666666666667,
+  "repelStrength": 8.64583333333333,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 1,
-  "close": false
+  "linkDistance": 172,
+  "scale": 0.7132754626224602,
+  "close": true
 }
