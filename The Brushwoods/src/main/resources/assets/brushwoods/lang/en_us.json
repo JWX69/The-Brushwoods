@@ -1,0 +1,21 @@
+{
+  "block.brushwoods.infection": "Shadowroot",
+  "block.brushwoods.infection_roots": "Shadowroot Sprouts",
+  "block.brushwoods.infection_vines": "Shadowroot Vines",
+  "block.brushwoods.agaricus": "Agaricus",
+  "block.brushwoods.large_agaricus": "Large Agaricus",
+  "block.brushwoods.small_agaricus": "Small Agaricus",
+  "block.brushwoods.gloomstone": "Gloomstone",
+  "block.brushwoods.gloomstone_bricks": "Gloomstone Bricks",
+  "block.brushwoods.rooted_gloomstone_bricks": "Rooted Gloomstone Bricks",
+  "block.brushwoods.ashwood_log": "Ashwood Log",
+  "block.brushwoods.ashwood_planks": "Ashwood Planks",
+  "block.brushwoods.silt": "Silt",
+  "block.brushwoods.silt_block": "Silt Block",
+  "block.brushwoods.elm_log": "Elm Log",
+  "block.brushwoods.elm_planks": "Elm Planks",
+  "block.brushwoods.elm_leaves": "Elm Leaves",
+  "block.brushwoods.sylvan_moss": "Sylvan Moss",
+  "block.brushwoods.lumenella": "Lumenella",
+  "block.brushwoods.lumenella_lichen": "Lumenella Lichen"
+}

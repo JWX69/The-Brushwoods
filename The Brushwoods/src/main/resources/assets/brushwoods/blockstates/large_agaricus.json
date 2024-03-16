@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "brushwoods:block/large_agaricus_bottom"
+    },
+    "half=upper": {
+      "model": "brushwoods:block/large_agaricus_top"
+    }
+  }
+}

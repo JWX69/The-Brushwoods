@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "distance=1": [
+      {
+        "model": "brushwoods:block/elm_leaves_2"
+      }
+    ],
+    "distance=2": [
+      {
+        "model": "brushwoods:block/elm_leaves_2"
+      }
+    ],
+    "distance=3": [
+      {
+        "model": "brushwoods:block/elm_leaves_1"
+      }
+    ],
+    "distance=4": [
+      {
+        "model": "brushwoods:block/elm_leaves_1"
+      }
+    ],
+    "distance=5": [
+      {
+        "model": "brushwoods:block/elm_leaves"
+      }
+    ],
+    "distance=6": [
+      {
+        "model": "brushwoods:block/elm_leaves"
+      }
+    ],
+    "distance=7": [
+      {
+        "model": "brushwoods:block/elm_leaves"
+      }
+    ],
+    "distance=8": [
+      {
+        "model": "brushwoods:block/elm_leaves"
+      }
+    ],
+    "distance=9": [
+      {
+        "model": "brushwoods:block/elm_leaves"
+      }
+    ],
+    "distance=10": [
+      {
+        "model": "brushwoods:block/elm_leaves"
+      }
+    ],
+    "distance=11": [
+      {
+        "model": "brushwoods:block/elm_leaves"
+      }
+    ],
+    "distance=12": [
+      {
+        "model": "brushwoods:block/elm_leaves"
+      }
+    ]
+  }
+}

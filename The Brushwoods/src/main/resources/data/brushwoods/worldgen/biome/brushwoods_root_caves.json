@@ -1,0 +1,28 @@
+{
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "precipitation": "none",
+  "effects": {
+    "sky_color": 1446168,
+    "fog_color": 1248790,
+    "water_color": 4539554,
+    "water_fog_color": 1246515,
+    "grass_color": 6306169,
+    "foliage_color": 6895999,
+    "particle": {
+      "options": {
+        "type": "brushwoods:dust"
+      },
+      "probability": 0.118093334
+    }
+  },
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [
+      "brushwoods:patch_infection_roots"
+    ]
+  ]
+}

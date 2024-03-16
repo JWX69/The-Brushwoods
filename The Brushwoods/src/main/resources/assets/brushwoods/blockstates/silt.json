@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "brushwoods:block/silt_height2"
+    },
+    "layers=2": {
+      "model": "brushwoods:block/silt_height4"
+    },
+    "layers=3": {
+      "model": "brushwoods:block/silt_height6"
+    },
+    "layers=4": {
+      "model": "brushwoods:block/silt_height8"
+    },
+    "layers=5": {
+      "model": "brushwoods:block/silt_height10"
+    },
+    "layers=6": {
+      "model": "brushwoods:block/silt_height12"
+    },
+    "layers=7": {
+      "model": "brushwoods:block/silt_height14"
+    },
+    "layers=8": {
+      "model": "brushwoods:block/silt_block"
+    }
+  }
+}

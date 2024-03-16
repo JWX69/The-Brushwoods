@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "brushwoods:block/elm_leaves_1"
+  },
+  "render_type": "cutout"
+}

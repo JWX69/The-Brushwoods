@@ -1,0 +1,20 @@
+{
+  "temperature": 0.8,
+  "downfall": 0.4,
+  "precipitation": "none",
+  "effects": {
+    "sky_color": 3296823,
+    "fog_color": 4147755,
+    "water_color": 5546132,
+    "water_fog_color": 1656899
+  },
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [
+      "brushwoods:elm_tree"
+    ]
+  ]
+}

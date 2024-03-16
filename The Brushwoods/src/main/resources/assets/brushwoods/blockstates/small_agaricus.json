@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "brushwoods:block/small_agaricus"
+      },
+      {
+        "model": "brushwoods:block/small_agaricus",
+        "y": 90
+      },
+      {
+        "model": "brushwoods:block/small_agaricus",
+        "y": 180
+      },
+      {
+        "model": "brushwoods:block/small_agaricus",
+        "y": 270
+      }
+    ]
+  }
+}
