@@ -9,6 +9,8 @@ Choir Dynamics: The behavior of Woodland Sprites is influenced by their choir dy
 
 Helping and Trading: Woodland Sprites should not be harmed or killed for loot. Instead, players are encouraged to help them or engage in friendly trades. Assisting a lost or distressed Woodland Sprite, such as guiding them back to their choir or fulfilling a specific request, can result in rewards or unique items being bestowed upon the player as a token of gratitude.
 
+The sprites grow their young in top of head and then plant on tree branch when mature enough. When the egg/baby is grown enough it snaps off of the tree explaining why the top of their heads resemble a broken branch.
+
 Woodland Sprite
 
 ![[sprite.png]]
