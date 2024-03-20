@@ -67,10 +67,10 @@ public class BrushwoodsBlocks {
     //silt
 
     public static final RegistryObject<Block> SILT = registerBlock("silt",
-            () -> new SnowLayerBlock(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_GRAY)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new SnowLayerBlock(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_GRAY).sound(SoundType.SOUL_SAND)),CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> SILT_BLOCK = registerBlock("silt_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_GRAY)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_GRAY).sound(SoundType.SOUL_SAND)),CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     //ashwood
 

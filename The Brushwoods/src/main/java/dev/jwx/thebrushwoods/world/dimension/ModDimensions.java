@@ -10,7 +10,7 @@ import net.minecraft.world.level.dimension.DimensionType;
 
 public class ModDimensions {
     public static final ResourceKey<Level> BW_KEY = ResourceKey.create(Registry.DIMENSION_REGISTRY,
-            new ResourceLocation(TheBrushwoods.MODID, "bw"));
+            new ResourceLocation(TheBrushwoods.MODID, "brushwoods"));
     public static final ResourceKey<DimensionType> BW_TYPE =
             ResourceKey.create(Registry.DIMENSION_TYPE_REGISTRY, BW_KEY.registry());
     

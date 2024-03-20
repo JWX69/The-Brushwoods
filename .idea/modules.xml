@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/The-Brushwoods.iml" filepath="$PROJECT_DIR$/.idea/The-Brushwoods.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TheBrushwoods.main.iml" filepath="$PROJECT_DIR$/.idea/modules/TheBrushwoods.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TheBrushwoods.test.iml" filepath="$PROJECT_DIR$/.idea/modules/TheBrushwoods.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dev.jwx.TheBrushwoods.test.iml" filepath="$PROJECT_DIR$/.idea/modules/dev.jwx.TheBrushwoods.test.iml" />
     </modules>
   </component>
 </project>
