@@ -23,6 +23,7 @@ import static net.minecraft.client.renderer.blockentity.TheEndPortalRenderer.END
 public class BrushwoodsRenderer{
     private static final ResourceLocation LUMA_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/luma_phases.png");
     private static final ResourceLocation UMBRA_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/umbra_phases.png");
+    private static final ResourceLocation SKY_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/brushwoods_sky.png");
 
     public static float getDayTime(boolean cycle24, ClientLevel level) {
         boolean isNatural = level.dimensionType()
@@ -38,7 +39,7 @@ public class BrushwoodsRenderer{
         RenderSystem.defaultBlendFunc();
         RenderSystem.depthMask(false);
         RenderSystem.setShader(GameRenderer::getPositionTexColorShader);
-        RenderSystem.setShaderTexture(0, END_SKY_LOCATION);
+        RenderSystem.setShaderTexture(0, SKY_LOCATION);
         Tesselator tesselator = Tesselator.getInstance();
         BufferBuilder bufferbuilder = tesselator.getBuilder();
 
@@ -107,7 +108,7 @@ public class BrushwoodsRenderer{
         f7 = (float)(i1 + 0) / 2.0F;
         f8 = (float)(l + 1) / 4.0F;
         f9 = (float)(i1 + 1) / 2.0F;
-        RenderSystem.setShaderTexture(0, LUMA_LOCATION);
+        RenderSystem.setShaderTexture(0, UMBRA_LOCATION);
         bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
         bufferbuilder.vertex(matrix4f1, -f12, -100.0F, f12).uv(f8, f9).endVertex();
         bufferbuilder.vertex(matrix4f1, f12, -100.0F, f12).uv(f13, f9).endVertex();
@@ -115,7 +116,7 @@ public class BrushwoodsRenderer{
         bufferbuilder.vertex(matrix4f1, -f12, -100.0F, -f12).uv(f8, f7).endVertex();
         BufferUploader.drawWithShader(bufferbuilder.end());
 
-        RenderSystem.setShaderTexture(0, UMBRA_LOCATION);
+        RenderSystem.setShaderTexture(0, LUMA_LOCATION);
         bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
         bufferbuilder.vertex(matrix4f1, -f12, 100.0F, -f12).uv(f8, f9).endVertex();
         bufferbuilder.vertex(matrix4f1, f12, 100.0F, -f12).uv(f13, f9).endVertex();
