@@ -21,9 +21,18 @@ import org.spongepowered.asm.mixin.Unique;
 import static net.minecraft.client.renderer.blockentity.TheEndPortalRenderer.END_SKY_LOCATION;
 
 public class BrushwoodsRenderer{
-    private static final ResourceLocation MOON_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/luma_phases.png");
+    private static final ResourceLocation LUMA_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/luma_phases.png");
+    private static final ResourceLocation UMBRA_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/umbra_phases.png");
 
-
+    public static float getDayTime(boolean cycle24, ClientLevel level) {
+        boolean isNatural = level.dimensionType()
+                .natural();
+        int dayTime = (int) ((level.getDayTime() * (isNatural ? 1 : 24)) % 24000);
+        int hours = (dayTime / 1000 + 6) % 24;
+        float hourTarget = (float) (-360 / (cycle24 ? 24f : 12f) * (hours % (cycle24 ? 24 : 12)));
+        hourTarget = (hourTarget<-180) ? hourTarget: hourTarget;
+        return hourTarget;
+    }
     public static void renderBrushwoodsSky(Minecraft minecraft, ClientLevel level, PoseStack pPoseStack, Matrix4f pProjectionMatrix, float pPartialTick, Camera pCamera, boolean p_202428_, Runnable pSkyFogSetup){
         RenderSystem.enableBlend();
         RenderSystem.defaultBlendFunc();
@@ -74,13 +83,14 @@ public class BrushwoodsRenderer{
         RenderSystem.disableBlend();
         float[] afloat = level.effects().getSunriseColor(level.getTimeOfDay(pPartialTick), pPartialTick);
         float f11 = 0;
-        float f12 = 10;
+        float f12 = 30f;
         float f7;
         float f8;
         float f9;
         if (afloat != null) {
             float f4 = afloat[0];
-            f12 = afloat[1];
+//            f12 = afloat[1];
+//            TheBrushwoods.LOGGER.info(String.valueOf(f12));
             float f6 = afloat[2];
         }
         pPoseStack.mulPose(Vector3f.YP.rotationDegrees(-90.0F));
@@ -89,19 +99,28 @@ public class BrushwoodsRenderer{
 
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-        RenderSystem.setShaderTexture(0, MOON_LOCATION);
-        int k = level.getMoonPhase();
+        int k = (int) Math.abs(((180-Math.abs(getDayTime(false,level)))/180)*7);
+//        TheBrushwoods.LOGGER.info(String.valueOf(k));
         int l = k % 4;
         int i1 = k / 4 % 2;
         float f13 = (float)(l + 0) / 4.0F;
         f7 = (float)(i1 + 0) / 2.0F;
         f8 = (float)(l + 1) / 4.0F;
         f9 = (float)(i1 + 1) / 2.0F;
+        RenderSystem.setShaderTexture(0, LUMA_LOCATION);
         bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
         bufferbuilder.vertex(matrix4f1, -f12, -100.0F, f12).uv(f8, f9).endVertex();
         bufferbuilder.vertex(matrix4f1, f12, -100.0F, f12).uv(f13, f9).endVertex();
         bufferbuilder.vertex(matrix4f1, f12, -100.0F, -f12).uv(f13, f7).endVertex();
         bufferbuilder.vertex(matrix4f1, -f12, -100.0F, -f12).uv(f8, f7).endVertex();
+        BufferUploader.drawWithShader(bufferbuilder.end());
+
+        RenderSystem.setShaderTexture(0, UMBRA_LOCATION);
+        bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
+        bufferbuilder.vertex(matrix4f1, -f12, 100.0F, -f12).uv(f8, f9).endVertex();
+        bufferbuilder.vertex(matrix4f1, f12, 100.0F, -f12).uv(f13, f9).endVertex();
+        bufferbuilder.vertex(matrix4f1, f12, 100.0F, f12).uv(f13, f7).endVertex();
+        bufferbuilder.vertex(matrix4f1, -f12, 100.0F, f12).uv(f8, f7).endVertex();
         BufferUploader.drawWithShader(bufferbuilder.end());
         RenderSystem.disableTexture();
         pPoseStack.mulPose(Vector3f.XP.rotationDegrees(level.getTimeOfDay(pPartialTick) * -360.0F));
