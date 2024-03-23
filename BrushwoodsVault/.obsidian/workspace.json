@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "74dc444895ff02bb",
+        "id": "a2d4ef350d52c13c",
         "type": "tabs",
         "children": [
           {
-            "id": "1924061881a75ce1",
+            "id": "0c40a08d5cd84b8e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Brushwoods/Orbit.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Brushwoods/Orbit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Brushwoods/Orbit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Brushwoods/Orbit.md"
+              }
             }
           },
           {
@@ -149,23 +157,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1924061881a75ce1",
+  "active": "0c40a08d5cd84b8e",
   "lastOpenFiles": [
+    "Brushwoods/Biomes/Fungal Grove.md",
+    "Brushwoods/Biomes/Shadowsludge Grotto.md",
+    "Brushwoods/Blocks - Other/Shadow root.md",
+    "Brushwoods/Blocks - Other/Shade Crystals.md",
+    "Brushwoods/Biomes/Shadowsludge Marsh.md",
+    "Brushwoods/Biomes/Submerged Meadow.md",
     "Brushwoods/Orbit.md",
     "Brushwoods/Brushwoods Dimension.md",
     "Brushwoods/Biomes/Verdant Canopy.md",
     "Brushwoods/Biomes/Veiled Abyss.md",
-    "Brushwoods/Biomes/Shadowsludge Marsh.md",
-    "Brushwoods/Biomes/Fungal Grove.md",
     "Brushwoods/Biomes/Root Caves.md",
-    "Brushwoods/Biomes/Shadowsludge Grotto.md",
-    "Brushwoods/Biomes/Submerged Meadow.md",
     "Brushwoods/Blocks - Other/Shadow thorn.md",
     "Brushwoods/Blocks - Other/Elm Wood.md",
     "Brushwoods/Blocks - Other/Ashwood.md",
-    "Brushwoods/Blocks - Other/Shade Crystals.md",
     "Brushwoods/Blocks - Other/Gloomstone.md",
-    "Brushwoods/Blocks - Other/Shadow root.md",
     "things.md",
     "Brushwoods/Blocks - Other/Silt.md",
     "Brushwoods/Images/Pasted image 20240317141020.png",
