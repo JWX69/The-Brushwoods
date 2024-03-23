@@ -81,7 +81,7 @@ public class BrushwoodsRenderer{
 
         RenderSystem.depthMask(true);
         RenderSystem.enableTexture();
-        RenderSystem.disableBlend();
+        RenderSystem.enableBlend();
         float[] afloat = level.effects().getSunriseColor(level.getTimeOfDay(pPartialTick), pPartialTick);
         float f11 = 0;
         float f12 = 30f;
