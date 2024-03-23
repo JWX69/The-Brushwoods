@@ -1,9 +1,9 @@
-package dev.jwx.thebrushwoods.core;
+package dev.jwx.thebrushwoods;
 
 import com.mojang.logging.LogUtils;
+import dev.jwx.thebrushwoods.core.BrushwoodsBlocks;
+import dev.jwx.thebrushwoods.core.BrushwoodsItems;
 import dev.jwx.thebrushwoods.world.dimension.ModDimensions;
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,7 +12,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
