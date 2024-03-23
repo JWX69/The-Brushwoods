@@ -1,5 +1,6 @@
 package dev.jwx.thebrushwoods.core;
 
+import dev.jwx.thebrushwoods.TheBrushwoods;
 import dev.jwx.thebrushwoods.common.block.ElmLeavesBlock;
 import dev.jwx.thebrushwoods.common.block.InfectionVinesBlock;
 import dev.jwx.thebrushwoods.common.block.InfectionVinesPlantBlock;
@@ -25,33 +26,33 @@ public class BrushwoodsBlocks {
 
     public static final RegistryObject<Block> INFECTION = registerBlock("infection",
             () -> new Block(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.COLOR_PURPLE)
-                    .strength(1.2f,6f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+                    .strength(1.2f,6f).sound(SoundType.HARD_CROP)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> INFECTION_ROOTS = registerBlock("infection_roots",
             () -> new RootsBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_PURPLE)
-                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ)),CreativeModeTab.TAB_DECORATIONS);
+                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> INFECTION_VINES = registerBlock("infection_vines",
             () -> new InfectionVinesBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PURPLE)
-                    .instabreak().noCollission()),CreativeModeTab.TAB_DECORATIONS);
+                    .instabreak().noCollission().sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> INFECTION_VINES_PLANT = registerBlockNoItem("infection_vines_plant",
             () -> new InfectionVinesPlantBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PURPLE)
-                    .instabreak().noCollission()));
+                    .instabreak().noCollission().sound(SoundType.HARD_CROP)));
 
     //agaricus
 
     public static final RegistryObject<Block> AGARICUS = registerBlock("agaricus",
             () -> new RootsBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.SAND)
-                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ)),CreativeModeTab.TAB_DECORATIONS);
+                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> SMALL_AGARICUS = registerBlock("small_agaricus",
             () -> new RootsBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.SAND)
-                    .instabreak().noCollission()),CreativeModeTab.TAB_DECORATIONS);
+                    .instabreak().noCollission().sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> LARGE_AGARICUS = registerBlock("large_agaricus",
             () -> new DoublePlantBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.SAND)
-                    .instabreak().noCollission()),CreativeModeTab.TAB_DECORATIONS);
+                    .instabreak().noCollission().sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
 
     //gloomstone
 
@@ -75,34 +76,34 @@ public class BrushwoodsBlocks {
     //ashwood
 
     public static final RegistryObject<Block> ASHWOOD_PLANKS = registerBlock("ashwood_planks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).sound(SoundType.WOOD)),CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> ASHWOOD_LOG = registerBlock("ashwood_log",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).sound(SoundType.WOOD)),CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     //elm
 
     public static final RegistryObject<Block> ELM_PLANKS = registerBlock("elm_planks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).sound(SoundType.WOOD)),CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> ELM_LOG = registerBlock("elm_log",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).sound(SoundType.WOOD)),CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> ELM_LEAVES = registerBlock("elm_leaves",
-            () -> new ElmLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_GREEN).strength(0.2F).noOcclusion()),CreativeModeTab.TAB_DECORATIONS);
+            () -> new ElmLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_GREEN).strength(0.2F).noOcclusion().sound(SoundType.AZALEA_LEAVES)),CreativeModeTab.TAB_DECORATIONS);
 
     //lumenella
 
     public static final RegistryObject<Block> lumenella = registerBlock("lumenella",
             () -> new RootsBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_YELLOW)
-                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ)),CreativeModeTab.TAB_DECORATIONS);
+                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> lumenella_lichen = registerBlock("lumenella_lichen",
             () -> new GlowLichenBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_YELLOW)
-                    .instabreak().noCollission().noOcclusion()),CreativeModeTab.TAB_DECORATIONS);
+                    .instabreak().noCollission().noOcclusion().sound(SoundType.GLOW_LICHEN)),CreativeModeTab.TAB_DECORATIONS);
     //misc
 
     public static final RegistryObject<Block> SYLVAN_MOSS = registerBlock("sylvan_moss",
-            () -> new Block(BlockBehaviour.Properties.of(Material.MOSS, MaterialColor.COLOR_GREEN)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.of(Material.MOSS, MaterialColor.COLOR_GREEN).sound(SoundType.MOSS)),CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     //end
 

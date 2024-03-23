@@ -5,20 +5,13 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
 import com.mojang.math.Matrix4f;
 import com.mojang.math.Vector3f;
-import dev.jwx.thebrushwoods.core.TheBrushwoods;
+import dev.jwx.thebrushwoods.TheBrushwoods;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.GameRenderer;
-import net.minecraft.client.renderer.LevelRenderer;
-import net.minecraft.client.renderer.RenderBuffers;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
-import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.Vec3;
-import org.spongepowered.asm.mixin.Unique;
-
-import static net.minecraft.client.renderer.blockentity.TheEndPortalRenderer.END_SKY_LOCATION;
 
 public class BrushwoodsRenderer{
     private static final ResourceLocation LUMA_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/luma_phases.png");
@@ -97,6 +90,8 @@ public class BrushwoodsRenderer{
         pPoseStack.mulPose(Vector3f.YP.rotationDegrees(-90.0F));
         pPoseStack.mulPose(Vector3f.XP.rotationDegrees(level.getTimeOfDay(pPartialTick) * 360.0F));
         Matrix4f matrix4f1 = pPoseStack.last().pose();
+        f11 = 1.0F - level.getRainLevel(pPartialTick);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, f11);
 
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);

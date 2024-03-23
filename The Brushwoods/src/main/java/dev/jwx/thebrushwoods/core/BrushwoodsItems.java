@@ -1,5 +1,6 @@
 package dev.jwx.thebrushwoods.core;
 
+import dev.jwx.thebrushwoods.TheBrushwoods;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

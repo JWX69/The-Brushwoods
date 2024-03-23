@@ -1,6 +1,6 @@
 package dev.jwx.thebrushwoods.world.dimension;
 
-import dev.jwx.thebrushwoods.core.TheBrushwoods;
+import dev.jwx.thebrushwoods.TheBrushwoods;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
