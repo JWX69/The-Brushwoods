@@ -15,8 +15,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 public class BrushwoodsBlocks {
+    public static final ToIntFunction lumenellaLight = new ToIntFunction() {
+        @Override
+        public int applyAsInt(Object value) {
+            return 10;
+        }
+    };
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, TheBrushwoods.MODID);
 
@@ -94,10 +101,10 @@ public class BrushwoodsBlocks {
 
     public static final RegistryObject<Block> lumenella = registerBlock("lumenella",
             () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
-                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)));
+                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP).lightLevel(lumenellaLight)));
     public static final RegistryObject<Block> lumenella_lichen = registerBlock("lumenella_lichen",
             () -> new GlowLichenBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN)
-                    .instabreak().noCollission().noOcclusion().sound(SoundType.GLOW_LICHEN)));
+                    .instabreak().noCollission().noOcclusion().sound(SoundType.GLOW_LICHEN).lightLevel(lumenellaLight)));
     //misc
 
     public static final RegistryObject<Block> SYLVAN_MOSS = registerBlock("sylvan_moss",

@@ -13,6 +13,8 @@ public class ModDimensions {
             new ResourceLocation(TheBrushwoods.MODID, "brushwoods"));
     public static final ResourceKey<DimensionType> BW_TYPE =
             ResourceKey.create(Registries.DIMENSION_TYPE, BW_KEY.registry());
+    public static final ResourceLocation BW_EFFECTS = new ResourceLocation(TheBrushwoods.MODID, "brushwoods");
+
     
     public static void register() {
         System.out.println("Registering ModDimensions for" + TheBrushwoods.MODID);
