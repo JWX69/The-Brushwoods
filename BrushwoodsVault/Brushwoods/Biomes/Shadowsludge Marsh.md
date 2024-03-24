@@ -1,3 +1,0 @@
-#biome 
-In the [[Brushwoods Dimension]] you can find the Shadowsludge marsh you will find twisting willow trees with drooping branches, and their roots creating archways throughout the biome. The marsh is very misty but is much lighter then the Veiled Abyss. The terrain is covered with many small ponds and even pockets of quick mud, sometimes these pockets of quick mud can be hiding the [[Shadowsludge Grotto]] just underneath the surface.
-

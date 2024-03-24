@@ -17,5 +17,11 @@
   "block.brushwoods.elm_leaves": "Elm Leaves",
   "block.brushwoods.sylvan_moss": "Sylvan Moss",
   "block.brushwoods.lumenella": "Lumenella",
-  "block.brushwoods.lumenella_lichen": "Lumenella Lichen"
+  "block.brushwoods.lumenella_lichen": "Lumenella Lichen",
+  "block.brushwoods.serpentine": "Serpentine",
+  "block.brushwoods.serpentine_bricks": "Serpentine Bricks",
+  "block.brushwoods.serpentine_tiles": "Serpentine Tiles",
+  "block.brushwoods.shale": "Shale",
+  "block.brushwoods.shale_bricks": "Shale Bricks",
+  "block.brushwoods.shale_tiles": "Shale Tiles"
 }

@@ -1,1 +1,0 @@
-A hard to find biome located underneath the [[Shadowsludge Marsh]] is the Shadowsludge Grotto, inside the Grotto you will find large caverns and labyrinthine tunnels decorated with stalactites, Shade crystals and dark murky ponds.

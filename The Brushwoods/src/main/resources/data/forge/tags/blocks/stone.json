@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "brushwoods:gloomstone"
+    "brushwoods:gloomstone",
+    "brushwoods:serpentine",
+    "brushwoods:shale"
   ]
 }
