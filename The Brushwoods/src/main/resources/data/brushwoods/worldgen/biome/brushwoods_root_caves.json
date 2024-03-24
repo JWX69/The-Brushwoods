@@ -1,7 +1,7 @@
 {
   "temperature": 0.8,
   "downfall": 0.4,
-  "precipitation": "none",
+  "has_precipitation": false,
   "effects": {
     "sky_color": 1446168,
     "fog_color": 1248790,
@@ -11,7 +11,7 @@
     "foliage_color": 6895999,
     "particle": {
       "options": {
-        "type": "brushwoods:dust"
+        "type": "minecraft:cloud"
       },
       "probability": 0.118093334
     }
