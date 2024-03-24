@@ -3,8 +3,7 @@ package dev.jwx.thebrushwoods.client.render;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
-import com.mojang.math.Matrix4f;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import dev.jwx.thebrushwoods.TheBrushwoods;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
@@ -12,6 +11,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.Vec3;
+import org.joml.Matrix4f;
 
 public class BrushwoodsRenderer{
     private static final ResourceLocation LUMA_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/luma_phases.png");
@@ -23,9 +23,7 @@ public class BrushwoodsRenderer{
                 .natural();
         int dayTime = (int) ((level.getDayTime() * (isNatural ? 1 : 24)) % 24000);
         int hours = (dayTime / 1000 + 6) % 24;
-        float hourTarget = (float) (-360 / (cycle24 ? 24f : 12f) * (hours % (cycle24 ? 24 : 12)));
-        hourTarget = (hourTarget<-180) ? hourTarget: hourTarget;
-        return hourTarget;
+        return (float) (-360 / (cycle24 ? 24f : 12f) * (hours % (cycle24 ? 24 : 12)));
     }
     public static void renderBrushwoodsSky(Minecraft minecraft, ClientLevel level, PoseStack pPoseStack, Matrix4f pProjectionMatrix, float pPartialTick, Camera pCamera, boolean p_202428_, Runnable pSkyFogSetup){
         RenderSystem.enableBlend();
@@ -39,23 +37,23 @@ public class BrushwoodsRenderer{
         for(int i = 0; i < 6; ++i) {
             pPoseStack.pushPose();
             if (i == 1) {
-                pPoseStack.mulPose(Vector3f.XP.rotationDegrees(90.0F));
+                pPoseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
             }
 
             if (i == 2) {
-                pPoseStack.mulPose(Vector3f.XP.rotationDegrees(-90.0F));
+                pPoseStack.mulPose(Axis.XP.rotationDegrees(-90.0F));
             }
 
             if (i == 3) {
-                pPoseStack.mulPose(Vector3f.XP.rotationDegrees(180.0F));
+                pPoseStack.mulPose(Axis.XP.rotationDegrees(180.0F));
             }
 
             if (i == 4) {
-                pPoseStack.mulPose(Vector3f.ZP.rotationDegrees(90.0F));
+                pPoseStack.mulPose(Axis.ZP.rotationDegrees(90.0F));
             }
 
             if (i == 5) {
-                pPoseStack.mulPose(Vector3f.ZP.rotationDegrees(-90.0F));
+                pPoseStack.mulPose(Axis.ZP.rotationDegrees(-90.0F));
             }
 
             Matrix4f matrix4f = pPoseStack.last().pose();
@@ -73,7 +71,6 @@ public class BrushwoodsRenderer{
         float f2 = (float)vec3.z;
 
         RenderSystem.depthMask(true);
-        RenderSystem.enableTexture();
         RenderSystem.enableBlend();
         float[] afloat = level.effects().getSunriseColor(level.getTimeOfDay(pPartialTick), pPartialTick);
         float f11 = 0;
@@ -87,8 +84,8 @@ public class BrushwoodsRenderer{
 //            TheBrushwoods.LOGGER.info(String.valueOf(f12));
             float f6 = afloat[2];
         }
-        pPoseStack.mulPose(Vector3f.YP.rotationDegrees(-90.0F));
-        pPoseStack.mulPose(Vector3f.XP.rotationDegrees(level.getTimeOfDay(pPartialTick) * 360.0F));
+        pPoseStack.mulPose(Axis.YP.rotationDegrees(-90.0F));
+        pPoseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(pPartialTick) * 360.0F));
         Matrix4f matrix4f1 = pPoseStack.last().pose();
         f11 = 1.0F - level.getRainLevel(pPartialTick);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, f11);
@@ -118,9 +115,7 @@ public class BrushwoodsRenderer{
         bufferbuilder.vertex(matrix4f1, f12, 100.0F, f12).uv(f13, f7).endVertex();
         bufferbuilder.vertex(matrix4f1, -f12, 100.0F, f12).uv(f8, f7).endVertex();
         BufferUploader.drawWithShader(bufferbuilder.end());
-        RenderSystem.disableTexture();
-        pPoseStack.mulPose(Vector3f.XP.rotationDegrees(level.getTimeOfDay(pPartialTick) * -360.0F));
-        pPoseStack.mulPose(Vector3f.YP.rotationDegrees(90.0F));
-
+        pPoseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(pPartialTick) * -360.0F));
+        pPoseStack.mulPose(Axis.YP.rotationDegrees(90.0F));
     }
 }

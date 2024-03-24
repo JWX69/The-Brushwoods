@@ -9,8 +9,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -25,91 +23,91 @@ public class BrushwoodsBlocks {
     //BLOCKS REGISTRY
 
     public static final RegistryObject<Block> INFECTION = registerBlock("infection",
-            () -> new Block(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.COLOR_PURPLE)
-                    .strength(1.2f,6f).sound(SoundType.HARD_CROP)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS)
+                    .strength(1.2f,6f).sound(SoundType.HARD_CROP)));
 
     public static final RegistryObject<Block> INFECTION_ROOTS = registerBlock("infection_roots",
-            () -> new RootsBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_PURPLE)
-                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
+            () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)
+                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)));
 
     public static final RegistryObject<Block> INFECTION_VINES = registerBlock("infection_vines",
-            () -> new InfectionVinesBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PURPLE)
-                    .instabreak().noCollission().sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
+            () -> new InfectionVinesBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)
+                    .instabreak().noCollission().sound(SoundType.HARD_CROP)));
 
     public static final RegistryObject<Block> INFECTION_VINES_PLANT = registerBlockNoItem("infection_vines_plant",
-            () -> new InfectionVinesPlantBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PURPLE)
+            () -> new InfectionVinesPlantBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)
                     .instabreak().noCollission().sound(SoundType.HARD_CROP)));
 
     //agaricus
 
     public static final RegistryObject<Block> AGARICUS = registerBlock("agaricus",
-            () -> new RootsBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.SAND)
-                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
+            () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
+                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)));
 
     public static final RegistryObject<Block> SMALL_AGARICUS = registerBlock("small_agaricus",
-            () -> new RootsBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.SAND)
-                    .instabreak().noCollission().sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
+            () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
+                    .instabreak().noCollission().sound(SoundType.HARD_CROP)));
 
     public static final RegistryObject<Block> LARGE_AGARICUS = registerBlock("large_agaricus",
-            () -> new DoublePlantBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.SAND)
-                    .instabreak().noCollission().sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
+            () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
+                    .instabreak().noCollission().sound(SoundType.HARD_CROP)));
 
     //gloomstone
 
     public static final RegistryObject<Block> GLOOMSTONE = registerBlock("gloomstone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_LIGHT_BLUE)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
     public static final RegistryObject<Block> GLOOMSTONE_BRICKS = registerBlock("gloomstone_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_LIGHT_BLUE)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
     public static final RegistryObject<Block> ROOTED_GLOOMSTONE_BRICKS = registerBlock("rooted_gloomstone_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_LIGHT_BLUE)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
     //silt
 
     public static final RegistryObject<Block> SILT = registerBlock("silt",
-            () -> new SnowLayerBlock(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_GRAY).sound(SoundType.SOUL_SAND)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new SnowLayerBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_SAND).sound(SoundType.SOUL_SAND)));
 
     public static final RegistryObject<Block> SILT_BLOCK = registerBlock("silt_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_GRAY).sound(SoundType.SOUL_SAND)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SAND).sound(SoundType.SOUL_SAND)));
 
     //ashwood
 
     public static final RegistryObject<Block> ASHWOOD_PLANKS = registerBlock("ashwood_planks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).sound(SoundType.WOOD)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> ASHWOOD_LOG = registerBlock("ashwood_log",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).sound(SoundType.WOOD)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
 
     //elm
 
     public static final RegistryObject<Block> ELM_PLANKS = registerBlock("elm_planks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).sound(SoundType.WOOD)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> ELM_LOG = registerBlock("elm_log",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).sound(SoundType.WOOD)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> ELM_LEAVES = registerBlock("elm_leaves",
-            () -> new ElmLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_GREEN).strength(0.2F).noOcclusion().sound(SoundType.AZALEA_LEAVES)),CreativeModeTab.TAB_DECORATIONS);
+            () -> new ElmLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.2F).noOcclusion().sound(SoundType.AZALEA_LEAVES)));
 
     //lumenella
 
     public static final RegistryObject<Block> lumenella = registerBlock("lumenella",
-            () -> new RootsBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_YELLOW)
-                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)),CreativeModeTab.TAB_DECORATIONS);
+            () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
+                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)));
     public static final RegistryObject<Block> lumenella_lichen = registerBlock("lumenella_lichen",
-            () -> new GlowLichenBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_YELLOW)
-                    .instabreak().noCollission().noOcclusion().sound(SoundType.GLOW_LICHEN)),CreativeModeTab.TAB_DECORATIONS);
+            () -> new GlowLichenBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN)
+                    .instabreak().noCollission().noOcclusion().sound(SoundType.GLOW_LICHEN)));
     //misc
 
     public static final RegistryObject<Block> SYLVAN_MOSS = registerBlock("sylvan_moss",
-            () -> new Block(BlockBehaviour.Properties.of(Material.MOSS, MaterialColor.COLOR_GREEN).sound(SoundType.MOSS)),CreativeModeTab.TAB_BUILDING_BLOCKS);
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).sound(SoundType.MOSS)));
 
     //end
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tab);
+        registerBlockItem(name, toReturn);
         return toReturn;
     }
 
@@ -118,9 +116,8 @@ public class BrushwoodsBlocks {
         return toReturn;
     }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
-                                                                            CreativeModeTab tab) {
-        return BrushwoodsItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+        return BrushwoodsItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
 
