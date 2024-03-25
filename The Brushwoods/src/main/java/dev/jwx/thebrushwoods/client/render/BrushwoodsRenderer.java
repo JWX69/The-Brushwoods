@@ -1,6 +1,7 @@
 package dev.jwx.thebrushwoods.client.render;
 
 import com.mojang.blaze3d.platform.GlStateManager;
+import com.mojang.blaze3d.shaders.FogShape;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.*;
 import com.mojang.math.Axis;
@@ -11,24 +12,32 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.FogRenderer;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.CubicSampler;
 import net.minecraft.util.Mth;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.BiomeManager;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import org.joml.Matrix4f;
 
 public class BrushwoodsRenderer{
     private static final ResourceLocation LUMA_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/luma_phases.png");
     private static final ResourceLocation UMBRA_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/umbra_phases.png");
     private static final ResourceLocation SKY_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/brushwoods_sky.png");
+    public static float[] fogData = new float[2];
+    private static final float[] sunriseCol = new float[4];
 
-    public static float getDayTime(boolean cycle24, ClientLevel level) {
+    public static float getDayTime(ClientLevel level) {
         boolean isNatural = level.dimensionType()
                 .natural();
         int dayTime = (int) ((level.getDayTime() * (isNatural ? 1 : 24)) % 24000);
-        int hours = (dayTime / 1000 + 6) % 24;
-        return (float) (-360 / (cycle24 ? 24f : 12f) * (hours % (cycle24 ? 24 : 12)));
+        float angle = (float) dayTime /24000 * 360;
+        return angle > 180 ? (float) (angle - 200) : angle-30;
     }
-    private static final float[] sunriseCol = new float[4];
     public static float[] getSunriseColor(float pTimeOfDay, float pPartialTicks) {
+        float brightness = 1f;
         float f = 0.4F;
         float f1 = Mth.cos(pTimeOfDay * 6.2831855F) - 0.0F;
         float f2 = -0.0F;
@@ -36,14 +45,21 @@ public class BrushwoodsRenderer{
             float f3 = (f1 - -0.0F) / 0.4F * 0.5F + 0.5F;
             float f4 = 1.0F - (1.0F - Mth.sin(f3 * 3.1415927F)) * 0.99F;
             f4 *= f4;
-            sunriseCol[0] = f3 * 0.3F + 0F;
-            sunriseCol[1] = f3 * f3 * 0.7F + 0.2F;
-            sunriseCol[2] = f3 * f3 * 0.0F + 0.2F;
-            sunriseCol[3] = f4;
+            sunriseCol[0] = (f3 * 0.3F + .1F) * brightness;
+            sunriseCol[1] = (f3 * f3 * 0.3F + 0.2F) * brightness;
+            sunriseCol[2] = (f3 * f3 * 0.1F + 0.2F) * brightness;
+            sunriseCol[3] = (f4) * brightness;
             return sunriseCol;
         } else {
+            sunriseCol[0] = .2f;
+            sunriseCol[1] = .29f;
+            sunriseCol[2] = .17f;
+            sunriseCol[3] = 0;
             return null;
         }
+    }
+    public static float[] getFogDistance() {
+        return fogData;
     }
     public static void renderBrushwoodsSky(Minecraft minecraft, ClientLevel level, PoseStack pPoseStack, Matrix4f pProjectionMatrix, float pPartialTick, Camera pCamera, boolean p_202428_, Runnable pSkyFogSetup){
         RenderSystem.enableBlend();
@@ -54,7 +70,11 @@ public class BrushwoodsRenderer{
         Tesselator tesselator = Tesselator.getInstance();
         BufferBuilder bufferbuilder = tesselator.getBuilder();
 
-
+        fogData[0] = -0.0F;
+        fogData[1] = (float) (46 + (Minecraft.getInstance().player.getY())/2);
+        if (Minecraft.getInstance().player.isScoping()) {
+            fogData[1] = fogData[1] + 200;
+        }
 
         Vec3 vec3 = level.getSkyColor(minecraft.gameRenderer.getMainCamera().getPosition(), pPartialTick);
         float f = (float)vec3.x;
@@ -92,6 +112,7 @@ public class BrushwoodsRenderer{
                 bufferbuilder.vertex(matrix4f, f8 * 120.0F, f9 * 120.0F, -f9 * 40.0F * afloat[3]).color(afloat[0], afloat[1], afloat[2], 0.0F).endVertex();
             }
             RenderSystem.setShaderFogColor(afloat[0], afloat[1], afloat[2]);
+            FogRenderer.levelFogColor();
 
             BufferUploader.drawWithShader(bufferbuilder.end());
             pPoseStack.popPose();
@@ -100,12 +121,12 @@ public class BrushwoodsRenderer{
         pPoseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(pPartialTick) * 360.0F));
         Matrix4f matrix4f1 = pPoseStack.last().pose();
         f11 = 1.0F - level.getRainLevel(pPartialTick);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, f11);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1);
 
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-        int k = (int) Math.abs(((180-Math.abs(getDayTime(false,level)))/180)*7);
-//        TheBrushwoods.LOGGER.info(String.valueOf(k));
+        int k = Mth.clamp((int) (getMoonPhase(level,false) * 7),0,7);
+//        TheBrushwoods.LOGGER.info(String.valueOf(getMoonPhase(level,true)));
         int l = k % 4;
         int i1 = k / 4 % 2;
         float f13 = (float)(l + 0) / 4.0F;
@@ -129,6 +150,25 @@ public class BrushwoodsRenderer{
         BufferUploader.drawWithShader(bufferbuilder.end());
         pPoseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(pPartialTick) * -360.0F));
         pPoseStack.mulPose(Axis.YP.rotationDegrees(90.0F));
+    }
+    public static float getMoonPhase(ClientLevel level, boolean invert) {
+//        TheBrushwoods.LOGGER.info(String.valueOf(getDayTime(false,level)));\
+        if (invert)
+            return dev.jwx.thebrushwoods.util.Mth.getFromRange(0,180,0,1,Math.abs(getDayTime(level)));
+        else
+            return dev.jwx.thebrushwoods.util.Mth.getFromRange(0,180,1,0,Math.abs(getDayTime(level)));
+    }
+    @OnlyIn(Dist.CLIENT)
+    public static class FogData {
+        public final FogRenderer.FogMode mode;
+        public float start;
+        public float end;
+        public FogShape shape;
+
+        public FogData(FogRenderer.FogMode pMode) {
+            this.shape = FogShape.SPHERE;
+            this.mode = pMode;
+        }
     }
 }
 
