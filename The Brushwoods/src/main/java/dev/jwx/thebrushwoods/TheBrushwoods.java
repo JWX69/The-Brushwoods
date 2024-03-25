@@ -2,9 +2,14 @@ package dev.jwx.thebrushwoods;
 
 import com.mojang.logging.LogUtils;
 import dev.jwx.thebrushwoods.core.BrushwoodsBlocks;
+import dev.jwx.thebrushwoods.core.BrushwoodsCreateiveModeTabs;
 import dev.jwx.thebrushwoods.core.BrushwoodsItems;
 import dev.jwx.thebrushwoods.world.dimension.ModDimensions;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -12,6 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -35,10 +41,19 @@ public class TheBrushwoods {
         // Register the Deferred Register to the mod event bus so items get registered
         BrushwoodsItems.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
+        BrushwoodsCreateiveModeTabs.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         ModDimensions.register();
+        modEventBus.addListener(this::addCreativeTab);
     }
-
+    private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTab() == BrushwoodsCreateiveModeTabs.TAB.get()) {
+            event.accept(BrushwoodsBlocks.lumenella.get().asItem());
+            for (RegistryObject<Item> object: BrushwoodsItems.ITEMS.getEntries()) {
+                event.accept(object.get());
+            }
+        }
+    }
     private void commonSetup(final FMLCommonSetupEvent event) {
         // Some common setup code
     }

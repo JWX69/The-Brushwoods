@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "90a2335ef135703d",
+        "id": "9a0ce7531407c045",
         "type": "tabs",
         "children": [
           {
-            "id": "6c6267e91f2573af",
+            "id": "28b3924f0544388a",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Brushwoods/Biomes/Root Caves.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Brushwoods/Biomes/Root Caves.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Brushwoods/Biomes/Root Caves.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Brushwoods/Biomes/Root Caves.md"
+              }
             }
           },
           {
@@ -149,45 +157,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6c6267e91f2573af",
+  "active": "28b3924f0544388a",
   "lastOpenFiles": [
     "Brushwoods/Blocks - Other/Shadow thorn.md",
+    "Brushwoods/Blocks - Other/Silt.md",
+    "Brushwoods/Images/beast.gif",
+    "Brushwoods/Images/beast of the abyss.png",
+    "Brushwoods/Images/dull sprite.png",
+    "Brushwoods/Images/gloomstone.png",
+    "Brushwoods/Images/Marsh.png",
+    "Brushwoods/Images/model.gif",
+    "Marsh&Grotto.png",
+    "Brushwoods/Orbit.md",
+    "things.md",
     "Brushwoods/Blocks - Other/Shadow root.md",
-    "Brushwoods/Biomes/Verdant Canopy.md",
-    "Brushwoods/Biomes/Root Caves.md",
-    "Brushwoods/Biomes/Submerged Meadow.md",
-    "Brushwoods/Biomes/Sludge Grotto.md",
-    "Brushwoods/Biomes/Veiled Abyss.md",
+    "Brushwoods/Blocks - Other/Shade Crystals.md",
+    "Brushwoods/Blocks - Other/Gloomstone.md",
+    "Brushwoods/Blocks - Other/Ashwood.md",
+    "Brushwoods/Brushwoods Dimension.md",
     "Veiled Abyss.png",
     "Brushwoods/Biomes/Sludge Marsh.md",
-    "Marsh&Grotto.png",
-    "Brushwoods/Images/Marsh.png",
-    "Brushwoods/Blocks - Other/Shade Crystals.md",
-    "Brushwoods/Orbit.md",
+    "Brushwoods/Biomes/Sludge Grotto.md",
+    "Brushwoods/Biomes/Verdant Canopy.md",
+    "Brushwoods/Biomes/Veiled Abyss.md",
+    "Brushwoods/Biomes/Submerged Meadow.md",
+    "Brushwoods/Biomes/Shadowsludge Marsh.md",
+    "Brushwoods/Biomes/Shadowsludge Grotto.md",
+    "Brushwoods/Biomes/Root Caves.md",
     "Brushwoods/Biomes/Fungal Grove.md",
-    "Brushwoods/Brushwoods Dimension.md",
     "Brushwoods/Blocks - Other/Elm Wood.md",
-    "Brushwoods/Blocks - Other/Ashwood.md",
-    "Brushwoods/Blocks - Other/Gloomstone.md",
-    "things.md",
-    "Brushwoods/Blocks - Other/Silt.md",
     "Brushwoods/Images/Pasted image 20240317141020.png",
     "Brushwoods/Features/Augment Table.canvas",
     "Brushwoods/Mobs/Poddle.md",
     "Brushwoods/Mobs/Beast of the abyss.md",
     "Brushwoods/Features/Shroudpods.md",
     "Brushwoods/Mobs/Woodland Sprite.md",
-    "Brushwoods/Images/model.gif",
     "Brushwoods/Mobs/Dull Sprite.md",
     "Brushwoods/Features/Augment Table.md",
     "Brushwoods/Images/Pasted image 20240223220511.png",
-    "Shroudpod.md",
-    "Items/Shroud Sak.md",
     "Items",
-    "Brushwoods/Images/Shroud Sak.png",
-    "Brushwoods/Images/Shade Crystal.png",
-    "Pasted image 20231224171850.png",
-    "Brushwoods/Images/Pasted image 20231224170236.png",
     "Brushwoods/Features"
   ]
 }
