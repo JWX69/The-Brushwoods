@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a2d4ef350d52c13c",
+        "id": "90a2335ef135703d",
         "type": "tabs",
         "children": [
           {
-            "id": "92de373c02681df8",
+            "id": "6c6267e91f2573af",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Brushwoods/Brushwoods Dimension.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Brushwoods/Brushwoods Dimension.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Brushwoods/Brushwoods Dimension.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Brushwoods/Brushwoods Dimension.md"
-              }
+              "state": {}
             }
           },
           {
@@ -157,27 +149,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "92de373c02681df8",
+  "active": "6c6267e91f2573af",
   "lastOpenFiles": [
-    "Brushwoods/Images/dull sprite.png",
-    "Brushwoods/Images/gloomstone.png",
-    "Brushwoods/Images/beast.gif",
-    "Brushwoods/Biomes/Verdant Canopy.md",
-    "Brushwoods/Orbit.md",
-    "things.md",
-    "Brushwoods/Biomes/Veiled Abyss.md",
-    "Brushwoods/Biomes/Submerged Meadow.md",
-    "Brushwoods/Biomes/Shadowsludge Marsh.md",
-    "Brushwoods/Biomes/Shadowsludge Grotto.md",
-    "Brushwoods/Biomes/Root Caves.md",
-    "Brushwoods/Biomes/Fungal Grove.md",
-    "Brushwoods/Blocks - Other/Shadow root.md",
-    "Brushwoods/Blocks - Other/Shade Crystals.md",
-    "Brushwoods/Brushwoods Dimension.md",
     "Brushwoods/Blocks - Other/Shadow thorn.md",
+    "Brushwoods/Blocks - Other/Shadow root.md",
+    "Brushwoods/Biomes/Verdant Canopy.md",
+    "Brushwoods/Biomes/Root Caves.md",
+    "Brushwoods/Biomes/Submerged Meadow.md",
+    "Brushwoods/Biomes/Sludge Grotto.md",
+    "Brushwoods/Biomes/Veiled Abyss.md",
+    "Veiled Abyss.png",
+    "Brushwoods/Biomes/Sludge Marsh.md",
+    "Marsh&Grotto.png",
+    "Brushwoods/Images/Marsh.png",
+    "Brushwoods/Blocks - Other/Shade Crystals.md",
+    "Brushwoods/Orbit.md",
+    "Brushwoods/Biomes/Fungal Grove.md",
+    "Brushwoods/Brushwoods Dimension.md",
     "Brushwoods/Blocks - Other/Elm Wood.md",
     "Brushwoods/Blocks - Other/Ashwood.md",
     "Brushwoods/Blocks - Other/Gloomstone.md",
+    "things.md",
     "Brushwoods/Blocks - Other/Silt.md",
     "Brushwoods/Images/Pasted image 20240317141020.png",
     "Brushwoods/Features/Augment Table.canvas",
@@ -196,7 +188,6 @@
     "Brushwoods/Images/Shade Crystal.png",
     "Pasted image 20231224171850.png",
     "Brushwoods/Images/Pasted image 20231224170236.png",
-    "Brushwoods/Images/Pasted image 20231224170052.png",
     "Brushwoods/Features"
   ]
 }

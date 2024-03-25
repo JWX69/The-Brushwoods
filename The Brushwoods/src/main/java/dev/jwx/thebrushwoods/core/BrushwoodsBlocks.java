@@ -110,6 +110,21 @@ public class BrushwoodsBlocks {
     public static final RegistryObject<Block> SYLVAN_MOSS = registerBlock("sylvan_moss",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).sound(SoundType.MOSS)));
 
+    //serpentine
+    public static final RegistryObject<Block> SERPENTINE = registerBlock("serpentine",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> SERPENTINE_BRICKS = registerBlock("serpentine_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> SERPENTINE_TILES = registerBlock("serpentine_tile",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+
+    //shale
+    public static final RegistryObject<Block> SHALE = registerBlock("shale",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> SHALE_BRICKS = registerBlock("shale_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> SHALE_TILES = registerBlock("shale_tiles",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
     //end
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
