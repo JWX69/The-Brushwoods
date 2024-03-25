@@ -6,26 +6,20 @@ import dev.jwx.thebrushwoods.client.render.BrushwoodsRenderer;
 import dev.jwx.thebrushwoods.world.dimension.ModDimensions;
 import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.client.renderer.FogRenderer;
 import net.minecraft.core.Holder;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.util.Mth;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.material.FogType;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.ForgeHooksClient;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -39,6 +33,12 @@ public class FogRendererMixin {
     private static float[] getSunrise(DimensionSpecialEffects instance, float f4, float v) {
         return BrushwoodsRenderer.getSunriseColor(f4,v);
     }
+    @Redirect(method ="setupColor", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Mth;clamp(FFF)F", ordinal = 1))
+    private static float injected(float pValue, float pMin, float pMax) {
+        return BrushwoodsRenderer.getFogDarkness();
+    }
+
+
     @Inject(method = "setupFog", at = @At(value = "HEAD"), cancellable = true)
     private static void injected(Camera pCamera, FogRenderer.FogMode pFogMode, float pFarPlaneDistance, boolean p_234176_, float p_234177_, CallbackInfo ci) {
         Level level = (Level)(Object)Minecraft.getInstance().level;

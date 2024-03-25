@@ -36,6 +36,9 @@ public class BrushwoodsRenderer{
         float angle = (float) dayTime /24000 * 360;
         return angle > 180 ? (float) (angle - 200) : angle-30;
     }
+    public static float getFogDarkness() {
+        return Math.abs(.5f-getMoonPhase(Minecraft.getInstance().level, true));
+    }
     public static float[] getSunriseColor(float pTimeOfDay, float pPartialTicks) {
         float brightness = 1f;
         float f = 0.4F;
