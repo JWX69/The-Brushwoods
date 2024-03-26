@@ -112,6 +112,10 @@ public class BrushwoodsBlocks {
 
     public static final RegistryObject<Block> SYLVAN_MOSS = registerBlock("sylvan_moss",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).sound(SoundType.MOSS)));
+    public static final RegistryObject<Block> ROOTED_SYLVAN_MOSS = registerBlock("rooted_sylvan_moss",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).sound(SoundType.MOSS)));
+    public static final RegistryObject<Block> VERDANT_PETALS = registerBlock("verdant_petals",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DANDELION).sound(SoundType.GRASS)));
 
     //serpentine
     public static final RegistryObject<Block> SERPENTINE = registerBlock("serpentine",
