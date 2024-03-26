@@ -10,4 +10,8 @@ import net.minecraft.world.level.biome.Biome;
 public class ModBiomes {
     public static final ResourceKey<Biome> VERDANT_CANOPY = ResourceKey.create(Registries.BIOME,
             new ResourceLocation(TheBrushwoods.MODID, "verdant_canopy"));
+    public static final ResourceKey<Biome> VERDANT_SHORE = ResourceKey.create(Registries.BIOME,
+            new ResourceLocation(TheBrushwoods.MODID, "verdant_shore"));
+    public static final ResourceKey<Biome> ERM = ResourceKey.create(Registries.BIOME,
+            new ResourceLocation(TheBrushwoods.MODID, "erm"));
 }

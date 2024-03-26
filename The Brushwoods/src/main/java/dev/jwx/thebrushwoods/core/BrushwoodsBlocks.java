@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,6 +22,11 @@ import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
 public class BrushwoodsBlocks {
+    public static final ToIntFunction<BlockState> lumenellaLight() {
+        return (state) -> {
+            return 10;
+        };
+    };
     public static final ToIntFunction lumenellaLight = value -> 10;
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, TheBrushwoods.MODID);
@@ -99,10 +105,10 @@ public class BrushwoodsBlocks {
 
     public static final RegistryObject<Block> lumenella = registerBlock("lumenella",
             () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
-                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP).lightLevel(lumenellaLight)));
+                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP).lightLevel(lumenellaLight())));
     public static final RegistryObject<Block> lumenella_lichen = registerBlock("lumenella_lichen",
             () -> new GlowLichenBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN)
-                    .instabreak().noCollission().noOcclusion().sound(SoundType.GLOW_LICHEN).lightLevel(lumenellaLight)));
+                    .instabreak().noCollission().noOcclusion().sound(SoundType.GLOW_LICHEN).lightLevel(lumenellaLight())));
     //misc
 
     public static final RegistryObject<Block> SYLVAN_MOSS = registerBlock("sylvan_moss",
@@ -110,7 +116,7 @@ public class BrushwoodsBlocks {
     public static final RegistryObject<Block> ROOTED_SYLVAN_MOSS = registerBlock("rooted_sylvan_moss",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).sound(SoundType.MOSS)));
     public static final RegistryObject<Block> VERDANT_PETALS = registerBlock("verdant_petals",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DANDELION).sound(SoundType.GRASS)));
+            () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).sound(SoundType.GRASS)));
 
     //serpentine
     public static final RegistryObject<Block> SERPENTINE = registerBlock("serpentine",

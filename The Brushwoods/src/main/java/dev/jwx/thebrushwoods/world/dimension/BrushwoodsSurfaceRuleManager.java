@@ -18,12 +18,19 @@ public class BrushwoodsSurfaceRuleManager {
 
     public static void setup() {
         registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.VERDANT_CANOPY),createVerdantCanopyRules());
+        registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.VERDANT_SHORE),createVerdantCanopyRules());
+        registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.ERM),createErmRules());
     }
     public static SurfaceRules.RuleSource conditional(SurfaceRules.ConditionSource conditionSource, SurfaceRules.RuleSource ruleSource) {
         return SurfaceRules.ifTrue(conditionSource,ruleSource);
     }
 
     public static SurfaceRules.RuleSource createVerdantCanopyRules() {
+        SurfaceRules.RuleSource sylvanMoss = conditional(SurfaceRules.ON_FLOOR, SurfaceRules.state(BrushwoodsBlocks.SYLVAN_MOSS.get().defaultBlockState()));
+        SurfaceRules.RuleSource shale = SurfaceRules.state(BrushwoodsBlocks.SHALE.get().defaultBlockState());
+        return SurfaceRules.sequence(sylvanMoss,shale);
+    }
+    public static SurfaceRules.RuleSource createErmRules() {
         SurfaceRules.RuleSource sylvanMoss = conditional(SurfaceRules.ON_FLOOR, SurfaceRules.state(BrushwoodsBlocks.SYLVAN_MOSS.get().defaultBlockState()));
         SurfaceRules.RuleSource shale = SurfaceRules.state(BrushwoodsBlocks.SHALE.get().defaultBlockState());
         return SurfaceRules.sequence(sylvanMoss,shale);

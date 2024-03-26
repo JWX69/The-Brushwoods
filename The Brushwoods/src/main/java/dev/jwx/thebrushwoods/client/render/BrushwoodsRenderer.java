@@ -27,6 +27,7 @@ public class BrushwoodsRenderer{
     private static final ResourceLocation UMBRA_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/umbra_phases.png");
     private static final ResourceLocation SKY_LOCATION = new ResourceLocation(TheBrushwoods.MODID, "environment/brushwoods_sky.png");
     public static float[] fogData = new float[2];
+    public static float fogOffset = 0f;
     private static final float[] sunriseCol = new float[4];
 
     public static float getDayTime(Level level) {

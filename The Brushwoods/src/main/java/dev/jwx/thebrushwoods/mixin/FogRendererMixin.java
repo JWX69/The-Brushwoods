@@ -96,8 +96,8 @@ public class FogRendererMixin {
                 fogrenderer$fogdata.shape = FogShape.CYLINDER;
             }
 
-            RenderSystem.setShaderFogStart(fogrenderer$fogdata.start);
-            RenderSystem.setShaderFogEnd(fogrenderer$fogdata.end);
+            RenderSystem.setShaderFogStart(fogrenderer$fogdata.start-BrushwoodsRenderer.fogOffset);
+            RenderSystem.setShaderFogEnd(fogrenderer$fogdata.end-BrushwoodsRenderer.fogOffset);
             RenderSystem.setShaderFogShape(fogrenderer$fogdata.shape);
             ForgeHooksClient.onFogRender(pFogMode, fogtype, pCamera, p_234177_, pFarPlaneDistance, fogrenderer$fogdata.start, fogrenderer$fogdata.end, fogrenderer$fogdata.shape);
         }
