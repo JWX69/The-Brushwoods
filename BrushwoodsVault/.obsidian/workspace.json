@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Brushwoods/Mobs/Woodland Sprite.md",
+                "file": "Brushwoods/Biomes/Verdant Canopy.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Brushwoods/Mobs/Woodland Sprite.md",
+                "file": "Brushwoods/Biomes/Verdant Canopy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Brushwoods/Mobs/Woodland Sprite.md",
+                "file": "Brushwoods/Biomes/Verdant Canopy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Brushwoods/Mobs/Woodland Sprite.md"
+                "file": "Brushwoods/Biomes/Verdant Canopy.md"
               }
             }
           },
@@ -159,6 +159,10 @@
   },
   "active": "28b3924f0544388a",
   "lastOpenFiles": [
+    "Brushwoods/Biomes/Veiled Abyss.md",
+    "Brushwoods/Biomes/Submerged Meadow.md",
+    "Brushwoods/Biomes/Sludge Marsh.md",
+    "Brushwoods/Biomes/Sludge Grotto.md",
     "Brushwoods/Biomes/Root Caves.md",
     "Brushwoods/Biomes/Fungal Grove.md",
     "Brushwoods/Mobs/Woodland Sprite.md",
@@ -181,11 +185,7 @@
     "Brushwoods/Blocks - Other/Ashwood.md",
     "Brushwoods/Brushwoods Dimension.md",
     "Veiled Abyss.png",
-    "Brushwoods/Biomes/Sludge Marsh.md",
-    "Brushwoods/Biomes/Sludge Grotto.md",
     "Brushwoods/Biomes/Verdant Canopy.md",
-    "Brushwoods/Biomes/Veiled Abyss.md",
-    "Brushwoods/Biomes/Submerged Meadow.md",
     "Brushwoods/Biomes/Shadowsludge Marsh.md",
     "Brushwoods/Biomes/Shadowsludge Grotto.md",
     "Brushwoods/Blocks - Other/Elm Wood.md",

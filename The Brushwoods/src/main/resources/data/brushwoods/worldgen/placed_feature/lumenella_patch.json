@@ -2,6 +2,10 @@
   "feature": "brushwoods:lumenella_patch",
   "placement": [
     {
+      "type": "minecraft:rarity_filter",
+      "chance": 32
+    },
+    {
       "type": "minecraft:in_square"
     },
     {
