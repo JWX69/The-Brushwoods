@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "brushwoods:block/shale",
+        "weight": 5
+      },
+
+      {
+        "model": "brushwoods:block/shale_1",
+        "weight": 5
+      }
+    ]
+  }
+}
