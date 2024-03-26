@@ -20,7 +20,8 @@ import java.util.Optional;
 public class BrushwoodTreeFeature extends Feature<BrushwoodTreeFeature.BrushwoodTreeConfiguration> {
     
     public static final Codec<BrushwoodTreeConfiguration> CODEC = RecordCodecBuilder.create((p_225468_) -> {
-        return p_225468_.group(BlockStateProvider.CODEC.fieldOf("trunk_provider").forGetter((p_161248_) -> {
+        return p_225468_.group(
+            BlockStateProvider.CODEC.fieldOf("trunk_provider").forGetter((p_161248_) -> {
             return p_161248_.trunkProvider;
         }), TrunkPlacer.CODEC.fieldOf("trunk_placer").forGetter((p_161246_) -> {
             return p_161246_.trunkPlacer;
