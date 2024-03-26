@@ -35,4 +35,5 @@ void main() {
     OutColor = (Chroma * Saturation) + Luma;
 
     fragColor = vec4(OutColor, 1.0);
+//    fragColor = vec4(1, 0.5, 0.5, 1);
 }
