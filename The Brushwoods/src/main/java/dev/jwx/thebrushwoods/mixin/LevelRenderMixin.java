@@ -25,11 +25,13 @@ public class LevelRenderMixin {
 
     @Shadow @Final private Minecraft minecraft;
 
+    @Shadow @Nullable private VertexBuffer starBuffer;
+
     @Inject(method = "renderSky", at = @At("HEAD"), cancellable = true)
     public void renderSky(PoseStack pPoseStack, Matrix4f pProjectionMatrix, float pPartialTick, Camera pCamera, boolean pIsFoggy, Runnable pSkyFogSetup, CallbackInfo ci) {
         assert this.level != null;
         if (this.level.dimension() == (ModDimensions.BW_KEY)) {
-            BrushwoodsRenderer.renderBrushwoodsSky(this.minecraft,this.level,pPoseStack, pProjectionMatrix, pPartialTick, pCamera, pIsFoggy, pSkyFogSetup);
+            BrushwoodsRenderer.renderBrushwoodsSky(this.minecraft,this.level,pPoseStack, pProjectionMatrix, pPartialTick, pCamera, pIsFoggy, pSkyFogSetup, this.starBuffer);
             ci.cancel();
         }
     }

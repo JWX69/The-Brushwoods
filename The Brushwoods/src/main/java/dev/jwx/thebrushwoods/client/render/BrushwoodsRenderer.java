@@ -29,7 +29,7 @@ public class BrushwoodsRenderer{
     public static float[] fogData = new float[2];
     private static final float[] sunriseCol = new float[4];
 
-    public static float getDayTime(ClientLevel level) {
+    public static float getDayTime(Level level) {
         boolean isNatural = level.dimensionType()
                 .natural();
         int dayTime = (int) ((level.getDayTime() * (isNatural ? 1 : 24)) % 24000);
@@ -38,6 +38,16 @@ public class BrushwoodsRenderer{
     }
     public static float getFogDarkness() {
         return Math.abs(.5f-getMoonPhase(Minecraft.getInstance().level, true));
+    }
+    public static float getLevelDarkess(Level level) {
+        return Math.abs(.5f-getMoonPhase(level, true));
+    }
+    public static boolean isUmbra(Level level) {
+        boolean isNatural = level.dimensionType()
+                .natural();
+        int dayTime = (int) ((level.getDayTime() * (isNatural ? 1 : 24)) % 24000);
+        float angle = (float) dayTime /24000 * 360;
+        return angle < 180;
     }
     public static float[] getSunriseColor(float pTimeOfDay, float pPartialTicks) {
         float brightness = 1f;
@@ -64,7 +74,7 @@ public class BrushwoodsRenderer{
     public static float[] getFogDistance() {
         return fogData;
     }
-    public static void renderBrushwoodsSky(Minecraft minecraft, ClientLevel level, PoseStack pPoseStack, Matrix4f pProjectionMatrix, float pPartialTick, Camera pCamera, boolean p_202428_, Runnable pSkyFogSetup){
+    public static void renderBrushwoodsSky(Minecraft minecraft, ClientLevel level, PoseStack pPoseStack, Matrix4f pProjectionMatrix, float pPartialTick, Camera pCamera, boolean p_202428_, Runnable pSkyFogSetup, VertexBuffer starBuffer){
         RenderSystem.enableBlend();
         RenderSystem.defaultBlendFunc();
         RenderSystem.depthMask(false);
@@ -151,10 +161,23 @@ public class BrushwoodsRenderer{
         bufferbuilder.vertex(matrix4f1, f12, 100.0F, f12).uv(f13, f7).endVertex();
         bufferbuilder.vertex(matrix4f1, -f12, 100.0F, f12).uv(f8, f7).endVertex();
         BufferUploader.drawWithShader(bufferbuilder.end());
+        float f10 = Math.abs(.5f-Math.abs(.5F-getMoonPhase(Minecraft.getInstance().level, false)))-.1f;
+        if (f10 > 0.0F) {
+            RenderSystem.setShaderColor(f10, f10, f10, f10);
+            FogRenderer.setupNoFog();
+            starBuffer.bind();
+            starBuffer.drawWithShader(pPoseStack.last().pose(), pProjectionMatrix, GameRenderer.getPositionShader());
+            VertexBuffer.unbind();
+            pSkyFogSetup.run();
+        }
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+
         pPoseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(pPartialTick) * -360.0F));
         pPoseStack.mulPose(Axis.YP.rotationDegrees(90.0F));
+
+
     }
-    public static float getMoonPhase(ClientLevel level, boolean invert) {
+    public static float getMoonPhase(Level level, boolean invert) {
 //        TheBrushwoods.LOGGER.info(String.valueOf(getDayTime(false,level)));\
         if (invert)
             return dev.jwx.thebrushwoods.util.Mth.getFromRange(0,180,0,1,Math.abs(getDayTime(level)));
