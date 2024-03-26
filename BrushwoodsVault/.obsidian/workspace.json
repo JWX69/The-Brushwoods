@@ -11,15 +11,24 @@
             "id": "28b3924f0544388a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Brushwoods/Biomes/Verdant Canopy.md",
-                "mode": "source",
-                "source": false
+                "file": "Brushwoods/Images/Marsh&Grotto.png"
+              }
+            }
+          },
+          {
+            "id": "e5fc74a8d619f59c",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Brushwoods/Images/Veiled Abyss 1.png"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Brushwoods/Biomes/Verdant Canopy.md",
+                "file": "Brushwoods/Images/Veiled Abyss 1.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Brushwoods/Biomes/Verdant Canopy.md",
+                "file": "Brushwoods/Images/Veiled Abyss 1.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Brushwoods/Biomes/Verdant Canopy.md"
+                "file": "Brushwoods/Images/Veiled Abyss 1.png"
               }
             }
           },
@@ -157,8 +166,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "28b3924f0544388a",
+  "active": "e5fc74a8d619f59c",
   "lastOpenFiles": [
+    "Brushwoods/Images/Marsh&Grotto.png",
+    "Brushwoods/Images/Veiled Abyss 1.png",
+    "Brushwoods/Images/Veiled Abyss.png",
+    "Brushwoods/Images/Marsh.png",
+    "Brushwoods/Biomes/Verdant Canopy.md",
+    "2024-03-26_15.29.35.png",
+    "Brushwoods/Images/2024-03-26_15.29.35 1.png",
     "Brushwoods/Biomes/Veiled Abyss.md",
     "Brushwoods/Biomes/Submerged Meadow.md",
     "Brushwoods/Biomes/Sludge Marsh.md",
@@ -174,9 +190,7 @@
     "Brushwoods/Images/beast of the abyss.png",
     "Brushwoods/Images/dull sprite.png",
     "Brushwoods/Images/gloomstone.png",
-    "Brushwoods/Images/Marsh.png",
     "Brushwoods/Images/model.gif",
-    "Marsh&Grotto.png",
     "Brushwoods/Orbit.md",
     "things.md",
     "Brushwoods/Blocks - Other/Shadow root.md",
@@ -184,17 +198,13 @@
     "Brushwoods/Blocks - Other/Gloomstone.md",
     "Brushwoods/Blocks - Other/Ashwood.md",
     "Brushwoods/Brushwoods Dimension.md",
-    "Veiled Abyss.png",
-    "Brushwoods/Biomes/Verdant Canopy.md",
     "Brushwoods/Biomes/Shadowsludge Marsh.md",
     "Brushwoods/Biomes/Shadowsludge Grotto.md",
     "Brushwoods/Blocks - Other/Elm Wood.md",
-    "Brushwoods/Images/Pasted image 20240317141020.png",
     "Brushwoods/Features/Augment Table.canvas",
     "Brushwoods/Mobs/Poddle.md",
     "Brushwoods/Features/Shroudpods.md",
     "Brushwoods/Features/Augment Table.md",
-    "Brushwoods/Images/Pasted image 20240223220511.png",
     "Items",
     "Brushwoods/Features"
   ]
