@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "brushwoods:block/shale1"
+    "all": "brushwoods:block/shale_1"
   }
 }

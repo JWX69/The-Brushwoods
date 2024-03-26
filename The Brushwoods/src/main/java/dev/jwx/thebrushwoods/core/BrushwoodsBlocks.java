@@ -118,7 +118,7 @@ public class BrushwoodsBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> SERPENTINE_BRICKS = registerBlock("serpentine_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
-    public static final RegistryObject<Block> SERPENTINE_TILES = registerBlock("serpentine_tile",
+    public static final RegistryObject<Block> SERPENTINE_TILES = registerBlock("serpentine_tiles",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
 
     //shale
