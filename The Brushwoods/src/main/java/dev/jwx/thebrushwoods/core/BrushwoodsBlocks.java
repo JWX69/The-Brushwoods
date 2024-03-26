@@ -21,12 +21,7 @@ import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
 public class BrushwoodsBlocks {
-    public static final ToIntFunction lumenellaLight = new ToIntFunction() {
-        @Override
-        public int applyAsInt(Object value) {
-            return 10;
-        }
-    };
+    public static final ToIntFunction lumenellaLight = value -> 10;
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, TheBrushwoods.MODID);
 

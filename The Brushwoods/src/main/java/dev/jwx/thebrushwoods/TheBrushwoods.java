@@ -3,8 +3,10 @@ package dev.jwx.thebrushwoods;
 import com.mojang.logging.LogUtils;
 import dev.jwx.thebrushwoods.core.BrushwoodsBlocks;
 import dev.jwx.thebrushwoods.core.BrushwoodsCreateiveModeTabs;
+import dev.jwx.thebrushwoods.core.BrushwoodsFeatures;
 import dev.jwx.thebrushwoods.core.BrushwoodsItems;
 import dev.jwx.thebrushwoods.world.dimension.ModDimensions;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -40,6 +42,7 @@ public class TheBrushwoods {
         BrushwoodsBlocks.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         BrushwoodsItems.register(modEventBus);
+        BrushwoodsFeatures.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         BrushwoodsCreateiveModeTabs.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
@@ -47,7 +50,7 @@ public class TheBrushwoods {
         modEventBus.addListener(this::addCreativeTab);
     }
     private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTab() == BrushwoodsCreateiveModeTabs.TAB.get()) {
+        if (event.getTab() == BrushwoodsCreateiveModeTabs.TAB.get()) {
             event.accept(BrushwoodsBlocks.lumenella.get().asItem());
             for (RegistryObject<Item> object: BrushwoodsItems.ITEMS.getEntries()) {
                 event.accept(object.get());
