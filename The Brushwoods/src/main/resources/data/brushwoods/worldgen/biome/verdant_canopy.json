@@ -5,8 +5,8 @@
   "effects": {
     "sky_color": 3296823,
     "fog_color": 4147755,
-    "water_color": 5546132,
-    "water_fog_color": 1656899
+    "water_color": 3296823,
+    "water_fog_color": 4147755
   },
   "spawners": {},
   "spawn_costs": {},
@@ -14,7 +14,9 @@
   "features": [
     [],
     [
-      "brushwoods:elm_tree"
+      "brushwoods:elm_tree",
+      "brushwoods:serpentine_rocks",
+      "brushwoods:lumenella_patch"
     ]
   ]
 }
