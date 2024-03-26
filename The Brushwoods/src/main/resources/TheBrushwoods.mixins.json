@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "thebrushwoods.refmap.json",
   "mixins": [
-    "LevelMixin"
+    "LevelMixin",
+    "NoiseBasedChunkGeneratorMixin"
   ],
   "client": [
     "DynamicTextureMixin",
