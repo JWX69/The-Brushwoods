@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "brushwoods:block/verdant_petals",
+        "weight": 5
+      },
+
+      {
+        "model": "brushwoods:block/verdant_petals_1",
+        "weight": 5
+      }
+    ]
+  }
+}

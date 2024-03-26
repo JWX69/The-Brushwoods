@@ -9,6 +9,6 @@ Navigating through this desolate realm requires caution and preparedness. The fo
 
 While the foggy void offers little in terms of life, it holds a reward for those curious enough to explore its depths may lead to them uncovering ancient relics or forgotten treasures. The void-like fog acts as a gateway to a realm that stands as a stark reminder of the delicate balance between life and decay within the Brushwoods dimension.
 
-![[Veiled Abyss.png]]
+![[Veiled Abyss 1.png]]
 ![[veiled_abyss2.png]]
 ![[render2.png]]

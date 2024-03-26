@@ -10,6 +10,7 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
 import net.minecraft.world.level.dimension.DimensionType;
+import net.minecraft.world.level.levelgen.SurfaceRules;
 
 import java.util.OptionalLong;
 
@@ -39,7 +40,6 @@ public class ModDimensions {
                 0.1f, // ambientLight
                 new DimensionType.MonsterSettings(false, false, ConstantInt.of(0), 0)));
     }
-
     
     public static void register() {
         System.out.println("Registering ModDimensions for" + TheBrushwoods.MODID);

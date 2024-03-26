@@ -5,6 +5,7 @@ import dev.jwx.thebrushwoods.core.BrushwoodsBlocks;
 import dev.jwx.thebrushwoods.core.BrushwoodsCreateiveModeTabs;
 import dev.jwx.thebrushwoods.core.BrushwoodsFeatures;
 import dev.jwx.thebrushwoods.core.BrushwoodsItems;
+import dev.jwx.thebrushwoods.world.dimension.BrushwoodsSurfaceRuleManager;
 import dev.jwx.thebrushwoods.world.dimension.ModDimensions;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
@@ -59,6 +60,9 @@ public class TheBrushwoods {
     }
     private void commonSetup(final FMLCommonSetupEvent event) {
         // Some common setup code
+        event.enqueueWork(()-> {
+            BrushwoodsSurfaceRuleManager.setup();
+        });
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
