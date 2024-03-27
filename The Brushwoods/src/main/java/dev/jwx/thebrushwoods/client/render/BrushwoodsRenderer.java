@@ -35,6 +35,7 @@ public class BrushwoodsRenderer{
     public static float fogOffset = 0f;
     private static final float[] sunriseCol = new float[4];
     public static int veildAbbysTicks = 0;
+    public static float fogShiftAmount = 0;
 
     public static float getDayTime(Level level) {
         boolean isNatural = level.dimensionType()
@@ -85,6 +86,9 @@ public class BrushwoodsRenderer{
         if (Minecraft.getInstance().level == null) {
             return;
         }
+        fogShiftAmount = fogShiftAmount +.01f;
+        if (fogShiftAmount > 100)
+            fogShiftAmount = 0;
         if (Minecraft.getInstance().level.dimension() == ModDimensions.BW_KEY && Minecraft.getInstance().player.getY() < 0) {
             veildAbbysTicks++;
         } else {
@@ -101,7 +105,7 @@ public class BrushwoodsRenderer{
         BufferBuilder bufferbuilder = tesselator.getBuilder();
 
         fogData[0] = -0.0F;
-        fogData[1] = (float) (46 + (Minecraft.getInstance().player.getY())/2) - (Minecraft.getInstance().player.getY() < 0 ? 40: 0);
+        fogData[1] = (float) (46 + (Minecraft.getInstance().player.getY())/2) - (Minecraft.getInstance().player.getY() < 7 ? 40: 0);
         if (Minecraft.getInstance().player.isScoping()) {
             fogData[1] = fogData[1] + 200;
         }
@@ -224,7 +228,7 @@ public class BrushwoodsRenderer{
             return;
         PoseStack poseStack = event.getPoseStack();
         Player player = Minecraft.getInstance().player;
-        AbyssFogSegment.mainChunkX = ((int) Math.round(player.getX()/100))*100;
+        AbyssFogSegment.mainChunkX = (((int) Math.round(player.getX()/100))*100);
         AbyssFogSegment.mainChunkZ = ((int) Math.round(player.getZ()/100))*100;
         Camera camera = getCamera();
         poseStack.mulPoseMatrix(new Matrix4f().rotation(camera.rotation()));
@@ -245,7 +249,7 @@ public class BrushwoodsRenderer{
                     poseStack.mulPose(Axis.XP.rotationDegrees(180));
                     poseStack.translate(camera.getPosition().x, camera.getPosition().y - 101.5 + i, -camera.getPosition().z);
                     poseStack.translate(-fogSegment.x, 0, fogSegment.z);
-                    poseStack.translate(-AbyssFogSegment.mainChunkX, 0, AbyssFogSegment.mainChunkZ);
+                    poseStack.translate(-AbyssFogSegment.mainChunkX-fogShiftAmount, 0, AbyssFogSegment.mainChunkZ);
 
                     Level level = Minecraft.getInstance().level;
                     Tesselator tesselator = Tesselator.getInstance();
@@ -261,7 +265,7 @@ public class BrushwoodsRenderer{
                     bufferbuilder.vertex(matrix4f1, -f12, 100.0F, f12).uv(0f, 0f).endVertex();
                     BufferUploader.drawWithShader(bufferbuilder.end());
 
-                    poseStack.translate(AbyssFogSegment.mainChunkX, 0, -AbyssFogSegment.mainChunkZ);
+                    poseStack.translate(AbyssFogSegment.mainChunkX+fogShiftAmount, 0, -AbyssFogSegment.mainChunkZ);
                     poseStack.translate(fogSegment.x, 0, -fogSegment.z);
                     poseStack.translate(-camera.getPosition().x, -camera.getPosition().y + 101.5 - i, camera.getPosition().z);
                     poseStack.mulPose(Axis.XP.rotationDegrees(-180));
@@ -269,16 +273,16 @@ public class BrushwoodsRenderer{
                 }
             }
         }
-        if (camera.getPosition().y < 0) {
+        if (camera.getPosition().y < 9) {
             for (float i = -5; i < 0; i = i + .151f) {
                 for (AbyssFogSegment fogSegment : abyysFogSegments) {
                     RenderSystem.setShaderColor(fogBrightness, fogBrightness, fogBrightness, Math.min(1, Math.abs((i + 5) / 14)));
                     Entity cameraEntity = Minecraft.getInstance().cameraEntity;
 
 //                poseStack.mulPose(Axis.XP.rotationDegrees(180));
-                    poseStack.translate(camera.getPosition().x, -camera.getPosition().y - 100.5 + i, camera.getPosition().z);
+                    poseStack.translate(camera.getPosition().x, -camera.getPosition().y - 92.5 + i, camera.getPosition().z);
                     poseStack.translate(-fogSegment.x, 0, fogSegment.z);
-                    poseStack.translate(-AbyssFogSegment.mainChunkX, 0, -AbyssFogSegment.mainChunkZ);
+                    poseStack.translate(-AbyssFogSegment.mainChunkX-fogShiftAmount, 0, -AbyssFogSegment.mainChunkZ);
 
                     Level level = Minecraft.getInstance().level;
                     Tesselator tesselator = Tesselator.getInstance();
@@ -294,9 +298,9 @@ public class BrushwoodsRenderer{
                     bufferbuilder.vertex(matrix4f1, -f12, 100.0F, f12).uv(0f, 0f).endVertex();
                     BufferUploader.drawWithShader(bufferbuilder.end());
 
-                    poseStack.translate(AbyssFogSegment.mainChunkX, 0, AbyssFogSegment.mainChunkZ);
+                    poseStack.translate(AbyssFogSegment.mainChunkX+fogShiftAmount, 0, AbyssFogSegment.mainChunkZ);
                     poseStack.translate(fogSegment.x, 0, -fogSegment.z);
-                    poseStack.translate(-camera.getPosition().x, camera.getPosition().y + 100.5 - i, -camera.getPosition().z);
+                    poseStack.translate(-camera.getPosition().x, camera.getPosition().y + 92.5 - i, -camera.getPosition().z);
 //                poseStack.mulPose(Axis.XP.rotationDegrees(-180));
                     RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
                 }
