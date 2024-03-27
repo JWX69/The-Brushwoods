@@ -11,24 +11,15 @@
             "id": "28b3924f0544388a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Brushwoods/Images/Marsh&Grotto.png"
-              }
-            }
-          },
-          {
-            "id": "e5fc74a8d619f59c",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Brushwoods/Images/Veiled Abyss 1.png"
+                "file": "Brushwoods/Mobs/Beast of the abyss.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Brushwoods/Images/Veiled Abyss 1.png",
+                "file": "Brushwoods/Mobs/Beast of the abyss.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Brushwoods/Images/Veiled Abyss 1.png",
+                "file": "Brushwoods/Mobs/Beast of the abyss.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Brushwoods/Images/Veiled Abyss 1.png"
+                "file": "Brushwoods/Mobs/Beast of the abyss.md"
               }
             }
           },
@@ -166,31 +157,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e5fc74a8d619f59c",
+  "active": "28b3924f0544388a",
   "lastOpenFiles": [
-    "Brushwoods/Images/Marsh&Grotto.png",
-    "Brushwoods/Images/Veiled Abyss 1.png",
-    "Brushwoods/Images/Veiled Abyss.png",
+    "Brushwoods/Images/beast.gif",
+    "Brushwoods/Mobs/Beast of the abyss.md",
     "Brushwoods/Images/Marsh.png",
-    "Brushwoods/Biomes/Verdant Canopy.md",
-    "2024-03-26_15.29.35.png",
     "Brushwoods/Images/2024-03-26_15.29.35 1.png",
+    "Brushwoods/Images/beast of the abyss.png",
     "Brushwoods/Biomes/Veiled Abyss.md",
+    "Brushwoods/Biomes/Verdant Canopy.md",
+    "Brushwoods/Images/Veiled Abyss 1.png",
+    "Brushwoods/Images/Marsh&Grotto.png",
     "Brushwoods/Biomes/Submerged Meadow.md",
     "Brushwoods/Biomes/Sludge Marsh.md",
     "Brushwoods/Biomes/Sludge Grotto.md",
     "Brushwoods/Biomes/Root Caves.md",
     "Brushwoods/Biomes/Fungal Grove.md",
     "Brushwoods/Mobs/Woodland Sprite.md",
-    "Brushwoods/Mobs/Beast of the abyss.md",
     "Brushwoods/Mobs/Dull Sprite.md",
     "Brushwoods/Blocks - Other/Shadow thorn.md",
     "Brushwoods/Blocks - Other/Silt.md",
-    "Brushwoods/Images/beast.gif",
-    "Brushwoods/Images/beast of the abyss.png",
     "Brushwoods/Images/dull sprite.png",
     "Brushwoods/Images/gloomstone.png",
     "Brushwoods/Images/model.gif",
+    "Marsh&Grotto.png",
     "Brushwoods/Orbit.md",
     "things.md",
     "Brushwoods/Blocks - Other/Shadow root.md",

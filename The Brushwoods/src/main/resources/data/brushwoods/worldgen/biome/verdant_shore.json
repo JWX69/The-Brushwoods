@@ -1,24 +1,29 @@
 {
-  "temperature": 0.8,
-  "downfall": 0.4,
-  "has_precipitation": false,
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.3,
   "effects": {
     "sky_color": 3296823,
     "fog_color": 4147755,
     "water_color": 3296823,
     "water_fog_color": 4147755
   },
-  "spawners": {},
-  "spawn_costs": {},
-  "carvers": {},
   "features": [
     [],
     [
       "brushwoods:elm_tree",
-      "brushwoods:elm_tree2",
       "brushwoods:serpentine_rocks",
       "brushwoods:lumenella_patch",
       "brushwoods:lumenella_lichen"
     ]
-  ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {},
+  "temperature": 0.8
 }

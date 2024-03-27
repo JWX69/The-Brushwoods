@@ -1,6 +1,7 @@
 package dev.jwx.thebrushwoods;
 
 import com.mojang.logging.LogUtils;
+import dev.jwx.thebrushwoods.client.render.BrushwoodsRenderer;
 import dev.jwx.thebrushwoods.core.BrushwoodsBlocks;
 import dev.jwx.thebrushwoods.core.BrushwoodsCreateiveModeTabs;
 import dev.jwx.thebrushwoods.core.BrushwoodsFeatures;
@@ -49,6 +50,12 @@ public class TheBrushwoods {
         MinecraftForge.EVENT_BUS.register(this);
         ModDimensions.register();
         modEventBus.addListener(this::addCreativeTab);
+        subscribeToEvents();
+    }
+    private void subscribeToEvents() {
+        IEventBus bus = MinecraftForge.EVENT_BUS;
+        bus.addListener(BrushwoodsRenderer::veieldAbbysTick);
+        bus.addListener(BrushwoodsRenderer::renderVeiledAbysFog);
     }
     private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == BrushwoodsCreateiveModeTabs.TAB.get()) {
@@ -62,6 +69,7 @@ public class TheBrushwoods {
         // Some common setup code
         event.enqueueWork(()-> {
             BrushwoodsSurfaceRuleManager.setup();
+            BrushwoodsRenderer.setupSegments();
         });
     }
 

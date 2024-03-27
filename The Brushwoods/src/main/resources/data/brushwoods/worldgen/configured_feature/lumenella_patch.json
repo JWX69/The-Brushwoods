@@ -1,7 +1,7 @@
 {
   "type": "minecraft:flower",
   "config": {
-    "tries": 64,
+    "tries": 100,
     "xz_spread": 7,
     "y_spread": 3,
     "feature": {
@@ -16,6 +16,12 @@
                   "Name": "brushwoods:lumenella"
                 },
                 "weight": 2
+              },
+              {
+                "data": {
+                  "Name": "brushwoods:verdant_petals"
+                },
+                "weight": 1
               }
             ]
           }

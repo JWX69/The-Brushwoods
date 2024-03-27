@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:multiface_growth",
+  "config": {
+    "block": "brushwoods:lumenella_lichen",
+    "can_be_placed_on": [
+      "brushwoods:elm_log"
+    ],
+    "can_place_on_ceiling": true,
+    "can_place_on_floor": false,
+    "can_place_on_wall": true,
+    "chance_of_spreading": 1,
+    "search_range": 20
+  }
+}
