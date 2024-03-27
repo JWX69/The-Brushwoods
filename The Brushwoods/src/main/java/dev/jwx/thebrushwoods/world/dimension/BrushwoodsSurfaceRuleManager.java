@@ -7,7 +7,7 @@ import net.minecraft.world.level.levelgen.SurfaceRules;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BrushwoodsSurfaceRuleManager {
+public class BrushwoodsSurfaceRuleManager { // Some From Citadel
     private static final List<SurfaceRules.RuleSource> BRUSHWOODS_REGISTRY = new ArrayList();
     public static void registerBrushwoodSurfaceRule(SurfaceRules.ConditionSource condition, SurfaceRules.RuleSource rule) {
         registerBrushwoodSurfaceRule(SurfaceRules.ifTrue(condition, rule));
