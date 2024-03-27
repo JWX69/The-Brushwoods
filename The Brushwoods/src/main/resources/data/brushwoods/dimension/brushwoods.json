@@ -11,7 +11,7 @@
           "parameters": {
             "temperature": 0.8,
             "humidity": 0.1,
-            "continentalness": 0,
+            "continentalness": -0.15,
             "erosion": 0,
             "weirdness": 0.4,
             "depth": 0.5,
@@ -23,7 +23,7 @@
           "parameters": {
             "temperature": 1,
             "humidity": 0.5,
-            "continentalness": 0,
+            "continentalness": 0.1,
             "erosion": 0,
             "weirdness": 0.5,
             "depth": 0.2,
@@ -35,7 +35,7 @@
           "parameters": {
             "temperature": 0,
             "humidity": 0,
-            "continentalness": 0,
+            "continentalness": -0.4,
             "erosion": 0,
             "weirdness": 0,
             "depth": 0.015,
