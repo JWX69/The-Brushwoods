@@ -2,6 +2,7 @@ package dev.jwx.thebrushwoods.world.dimension;
 
 import com.google.common.collect.ImmutableList;
 import dev.jwx.thebrushwoods.core.BrushwoodsBlocks;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 
 import java.util.ArrayList;
@@ -20,9 +21,15 @@ public class BrushwoodsSurfaceRuleManager { // Some From Citadel
         registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.VERDANT_CANOPY),createVerdantCanopyRules());
         registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.VERDANT_SHORE),createVerdantCanopyRules());
         registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.ERM),createErmRules());
+        registerBrushwoodSurfaceRule(createVeiledAbyssRules());
     }
     public static SurfaceRules.RuleSource conditional(SurfaceRules.ConditionSource conditionSource, SurfaceRules.RuleSource ruleSource) {
         return SurfaceRules.ifTrue(conditionSource,ruleSource);
+    }
+    public static SurfaceRules.RuleSource createVeiledAbyssRules() {
+        SurfaceRules.RuleSource air = conditional(SurfaceRules.VERY_DEEP_UNDER_FLOOR, SurfaceRules.state(Blocks.AIR.defaultBlockState()));
+        SurfaceRules.RuleSource air2 = conditional(SurfaceRules.VERY_DEEP_UNDER_FLOOR, SurfaceRules.state(Blocks.AIR.defaultBlockState()));
+        return SurfaceRules.sequence(air);
     }
 
     public static SurfaceRules.RuleSource createVerdantCanopyRules() {

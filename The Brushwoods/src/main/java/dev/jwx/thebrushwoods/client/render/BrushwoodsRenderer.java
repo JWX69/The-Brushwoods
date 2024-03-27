@@ -231,42 +231,80 @@ public class BrushwoodsRenderer{
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.enableBlend();
         RenderSystem.defaultBlendFunc();
+        RenderSystem.depthMask(Minecraft.useShaderTransparency());
         Vec3 camPos = camera.getPosition().scale(-1);
+        float fogBrightness = 0.5f;
 //        (poseStack).mulPose(Direction.UP, (float) Math.PI);
 //        (poseStack).translate(camPos.x,camPos.y, camPos.z);
-        for (float i = 0; i > -5; i = i-.2f) {
-        for (AbyssFogSegment fogSegment: abyysFogSegments) {
-                Entity cameraEntity = Minecraft.getInstance().cameraEntity;
-                poseStack.mulPose(Axis.XN.rotationDegrees((float) Math.sin((double) veildAbbysTicks / 600) * 4));
-                poseStack.mulPose(Axis.ZN.rotationDegrees((float) Math.sin((double) veildAbbysTicks / 605) * 4));
-                poseStack.mulPose(Axis.XP.rotationDegrees(180));
-                poseStack.translate(camera.getPosition().x, camera.getPosition().y - 100.5 + i, -camera.getPosition().z);
-                poseStack.translate(-fogSegment.x, 0, fogSegment.z);
-                poseStack.translate(-AbyssFogSegment.mainChunkX, 0, AbyssFogSegment.mainChunkZ);
+        if (camera.getPosition().y > -1) {
+            for (float i = -7; i < 0; i = i + .151f) {
+                for (AbyssFogSegment fogSegment : abyysFogSegments) {
+                    RenderSystem.setShaderColor(fogBrightness, fogBrightness, fogBrightness, Math.min(1, Math.abs((i + 5) / 14)));
+                    Entity cameraEntity = Minecraft.getInstance().cameraEntity;
 
-                Level level = Minecraft.getInstance().level;
-                Tesselator tesselator = Tesselator.getInstance();
-                BufferBuilder bufferbuilder = tesselator.getBuilder();
-                Matrix4f matrix4f1 = poseStack.last().pose();
+                    poseStack.mulPose(Axis.XP.rotationDegrees(180));
+                    poseStack.translate(camera.getPosition().x, camera.getPosition().y - 101.5 + i, -camera.getPosition().z);
+                    poseStack.translate(-fogSegment.x, 0, fogSegment.z);
+                    poseStack.translate(-AbyssFogSegment.mainChunkX, 0, AbyssFogSegment.mainChunkZ);
 
-                float f12 = 50f;
-                RenderSystem.setShaderTexture(0, FOG_LOCATION);
-                RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 0.1F);
-                bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-                bufferbuilder.vertex(matrix4f1, -f12, 100.0F, -f12).uv(0f, 1f).endVertex();
-                bufferbuilder.vertex(matrix4f1, f12, 100.0F, -f12).uv(1f, 1f).endVertex();
-                bufferbuilder.vertex(matrix4f1, f12, 100.0F, f12).uv(1f, 0f).endVertex();
-                bufferbuilder.vertex(matrix4f1, -f12, 100.0F, f12).uv(0f, 0f).endVertex();
-                BufferUploader.drawWithShader(bufferbuilder.end());
-                RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                    Level level = Minecraft.getInstance().level;
+                    Tesselator tesselator = Tesselator.getInstance();
+                    BufferBuilder bufferbuilder = tesselator.getBuilder();
+                    Matrix4f matrix4f1 = poseStack.last().pose();
 
-                poseStack.translate(AbyssFogSegment.mainChunkX, 0, -AbyssFogSegment.mainChunkZ);
-                poseStack.translate(fogSegment.x, 0, -fogSegment.z);
-                poseStack.translate(-camera.getPosition().x, -camera.getPosition().y + 100.5 - i, camera.getPosition().z);
-                poseStack.mulPose(Axis.XP.rotationDegrees(-180));
-                RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                    float f12 = 50f;
+                    RenderSystem.setShaderTexture(0, FOG_LOCATION);
+                    bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
+                    bufferbuilder.vertex(matrix4f1, -f12, 100.0F, -f12).uv(0f, 1f).endVertex();
+                    bufferbuilder.vertex(matrix4f1, f12, 100.0F, -f12).uv(1f, 1f).endVertex();
+                    bufferbuilder.vertex(matrix4f1, f12, 100.0F, f12).uv(1f, 0f).endVertex();
+                    bufferbuilder.vertex(matrix4f1, -f12, 100.0F, f12).uv(0f, 0f).endVertex();
+                    BufferUploader.drawWithShader(bufferbuilder.end());
+
+                    poseStack.translate(AbyssFogSegment.mainChunkX, 0, -AbyssFogSegment.mainChunkZ);
+                    poseStack.translate(fogSegment.x, 0, -fogSegment.z);
+                    poseStack.translate(-camera.getPosition().x, -camera.getPosition().y + 101.5 - i, camera.getPosition().z);
+                    poseStack.mulPose(Axis.XP.rotationDegrees(-180));
+                    RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                }
             }
         }
+        if (camera.getPosition().y < 0) {
+            for (float i = -5; i < 0; i = i + .151f) {
+                for (AbyssFogSegment fogSegment : abyysFogSegments) {
+                    RenderSystem.setShaderColor(fogBrightness, fogBrightness, fogBrightness, Math.min(1, Math.abs((i + 5) / 14)));
+                    Entity cameraEntity = Minecraft.getInstance().cameraEntity;
+
+//                poseStack.mulPose(Axis.XP.rotationDegrees(180));
+                    poseStack.translate(camera.getPosition().x, -camera.getPosition().y - 100.5 + i, camera.getPosition().z);
+                    poseStack.translate(-fogSegment.x, 0, fogSegment.z);
+                    poseStack.translate(-AbyssFogSegment.mainChunkX, 0, -AbyssFogSegment.mainChunkZ);
+
+                    Level level = Minecraft.getInstance().level;
+                    Tesselator tesselator = Tesselator.getInstance();
+                    BufferBuilder bufferbuilder = tesselator.getBuilder();
+                    Matrix4f matrix4f1 = poseStack.last().pose();
+
+                    float f12 = 50f;
+                    RenderSystem.setShaderTexture(0, FOG_LOCATION);
+                    bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
+                    bufferbuilder.vertex(matrix4f1, -f12, 100.0F, -f12).uv(0f, 1f).endVertex();
+                    bufferbuilder.vertex(matrix4f1, f12, 100.0F, -f12).uv(1f, 1f).endVertex();
+                    bufferbuilder.vertex(matrix4f1, f12, 100.0F, f12).uv(1f, 0f).endVertex();
+                    bufferbuilder.vertex(matrix4f1, -f12, 100.0F, f12).uv(0f, 0f).endVertex();
+                    BufferUploader.drawWithShader(bufferbuilder.end());
+
+                    poseStack.translate(AbyssFogSegment.mainChunkX, 0, AbyssFogSegment.mainChunkZ);
+                    poseStack.translate(fogSegment.x, 0, -fogSegment.z);
+                    poseStack.translate(-camera.getPosition().x, camera.getPosition().y + 100.5 - i, -camera.getPosition().z);
+//                poseStack.mulPose(Axis.XP.rotationDegrees(-180));
+                    RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+                }
+            }
+        }
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+        poseStack.mulPose(Axis.XN.rotationDegrees((float) Math.sin((double) veildAbbysTicks / 600) * 4));
+        poseStack.mulPose(Axis.ZN.rotationDegrees((float) Math.sin((double) veildAbbysTicks / 605) * 4));
     }
     public static float getMoonPhase(Level level, boolean invert) {
 //        TheBrushwoods.LOGGER.info(String.valueOf(getDayTime(false,level)));\
