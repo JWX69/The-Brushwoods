@@ -2,7 +2,7 @@
   "type": "minecraft:overworld",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "minecraft:overworld",
+    "settings": "brushwoods:the_brushwoods",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
@@ -26,7 +26,7 @@
             "continentalness": 0.1,
             "erosion": 0,
             "weirdness": 0.5,
-            "depth": 0.2,
+            "depth": 1,
             "offset": 0
           }
         },
@@ -35,10 +35,55 @@
           "parameters": {
             "temperature": 0,
             "humidity": 0,
-            "continentalness": -0.4,
+            "continentalness": [
+              -0.455,
+              -0.19
+            ],
             "erosion": 0,
             "weirdness": 0,
-            "depth": 0.015,
+            "depth": 1,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "brushwoods:erm",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": [
+              -1.05,
+              -0.455
+            ],
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 1,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "brushwoods:veiled_abyss",
+          "parameters": {
+            "temperature": [
+              -2,
+              2
+            ],
+            "humidity": [
+              -2,
+              2
+            ],
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "depth": 1.4,
             "offset": 0
           }
         }

@@ -14,4 +14,6 @@ public class ModBiomes {
             new ResourceLocation(TheBrushwoods.MODID, "verdant_shore"));
     public static final ResourceKey<Biome> ERM = ResourceKey.create(Registries.BIOME,
             new ResourceLocation(TheBrushwoods.MODID, "erm"));
+    public static final ResourceKey<Biome> VEILED_ABYSS = ResourceKey.create(Registries.BIOME,
+            new ResourceLocation(TheBrushwoods.MODID, "veiled_abyss"));
 }

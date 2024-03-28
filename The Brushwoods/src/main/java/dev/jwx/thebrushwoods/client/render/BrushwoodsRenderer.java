@@ -105,8 +105,8 @@ public class BrushwoodsRenderer{
         BufferBuilder bufferbuilder = tesselator.getBuilder();
 
         fogData[0] = -0.0F;
-        fogData[1] = (float) (46 + (Minecraft.getInstance().player.getY())/2) - (Minecraft.getInstance().player.getY() < 7 ? 40: 0);
-        if (Minecraft.getInstance().player.isScoping()) {
+        fogData[1] = (float) (46 + (Minecraft.getInstance().player.getY())/8) - (Minecraft.getInstance().player.getY() < 7 ? 30: 0);
+        if (Minecraft.getInstance().player.isScoping() || Minecraft.getInstance().player.isSpectator()) {
             fogData[1] = fogData[1] + 200;
         }
 
@@ -196,6 +196,8 @@ public class BrushwoodsRenderer{
         pPoseStack.mulPose(Axis.XP.rotationDegrees(level.getTimeOfDay(pPartialTick) * -360.0F));
         pPoseStack.mulPose(Axis.YP.rotationDegrees(90.0F));
 
+//        pPoseStack.mulPose(Axis.XN.rotationDegrees((float) Math.sin((double) veildAbbysTicks / 60) * 4));
+//        pPoseStack.mulPose(Axis.ZN.rotationDegrees((float) Math.sin((double) veildAbbysTicks / 65) * 4));
     }
     @NotNull
     private static Camera getCamera() {
@@ -224,7 +226,7 @@ public class BrushwoodsRenderer{
         abyysFogSegments[8] = new AbyssFogSegment(100,100);
     }
     public static void renderVeiledAbysFog(RenderLevelStageEvent event) {
-        if (event.getStage()  != RenderLevelStageEvent.Stage.AFTER_WEATHER)
+        if (event.getStage()  != RenderLevelStageEvent.Stage.AFTER_WEATHER || Minecraft.getInstance().level.dimension() != ModDimensions.BW_KEY)
             return;
         PoseStack poseStack = event.getPoseStack();
         Player player = Minecraft.getInstance().player;
@@ -301,14 +303,12 @@ public class BrushwoodsRenderer{
                     poseStack.translate(AbyssFogSegment.mainChunkX+fogShiftAmount, 0, AbyssFogSegment.mainChunkZ);
                     poseStack.translate(fogSegment.x, 0, -fogSegment.z);
                     poseStack.translate(-camera.getPosition().x, camera.getPosition().y + 92.5 - i, -camera.getPosition().z);
-//                poseStack.mulPose(Axis.XP.rotationDegrees(-180));
+//                  poseStack.mulPose(Axis.XP.rotationDegrees(-180));
                     RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
                 }
             }
         }
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        poseStack.mulPose(Axis.XN.rotationDegrees((float) Math.sin((double) veildAbbysTicks / 600) * 4));
-        poseStack.mulPose(Axis.ZN.rotationDegrees((float) Math.sin((double) veildAbbysTicks / 605) * 4));
     }
     public static float getMoonPhase(Level level, boolean invert) {
 //        TheBrushwoods.LOGGER.info(String.valueOf(getDayTime(false,level)));\

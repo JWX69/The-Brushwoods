@@ -56,6 +56,7 @@ public class TheBrushwoods {
         IEventBus bus = MinecraftForge.EVENT_BUS;
         bus.addListener(BrushwoodsRenderer::veieldAbbysTick);
         bus.addListener(BrushwoodsRenderer::renderVeiledAbysFog);
+        bus.addListener(BrushwoodsSurfaceRuleManager::playerSneak);
     }
     private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == BrushwoodsCreateiveModeTabs.TAB.get()) {

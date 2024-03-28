@@ -77,10 +77,10 @@ public class BrushwoodsBlocks {
     //silt
 
     public static final RegistryObject<Block> SILT = registerBlock("silt",
-            () -> new SnowLayerBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_SAND).sound(SoundType.SOUL_SAND)));
+            () -> new SnowLayerBlock(BlockBehaviour.Properties.copy(Blocks.SAND).sound(SoundType.SOUL_SAND)));
 
     public static final RegistryObject<Block> SILT_BLOCK = registerBlock("silt_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SOUL_SAND).sound(SoundType.SOUL_SAND)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND).sound(SoundType.SOUL_SAND)));
 
     //ashwood
 
