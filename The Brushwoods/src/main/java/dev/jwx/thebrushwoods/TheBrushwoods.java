@@ -8,10 +8,7 @@ import dev.jwx.thebrushwoods.core.BrushwoodsFeatures;
 import dev.jwx.thebrushwoods.core.BrushwoodsItems;
 import dev.jwx.thebrushwoods.world.dimension.BrushwoodsSurfaceRuleManager;
 import dev.jwx.thebrushwoods.world.dimension.ModDimensions;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -60,7 +57,7 @@ public class TheBrushwoods {
     }
     private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == BrushwoodsCreateiveModeTabs.TAB.get()) {
-            event.accept(BrushwoodsBlocks.lumenella.get().asItem());
+            event.accept(BrushwoodsBlocks.LUMENELLA.get().asItem());
             for (RegistryObject<Item> object: BrushwoodsItems.ITEMS.getEntries()) {
                 event.accept(object.get());
             }

@@ -14,7 +14,7 @@ public class BrushwoodsCreateiveModeTabs {
             TheBrushwoods.MODID);
 
     public static RegistryObject<CreativeModeTab> TAB = CREATIVE_MODE_TABS.register("tutorial_tab", () ->
-            CreativeModeTab.builder().icon(() -> new ItemStack(BrushwoodsBlocks.lumenella.get().asItem()))
+            CreativeModeTab.builder().icon(() -> new ItemStack(BrushwoodsBlocks.LUMENELLA.get().asItem()))
                     .title(Component.translatable("creativemodetab.brushwoods")).build());
 
     public static void register(IEventBus eventBus) {

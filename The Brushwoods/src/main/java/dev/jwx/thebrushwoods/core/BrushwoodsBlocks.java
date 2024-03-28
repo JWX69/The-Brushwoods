@@ -5,9 +5,7 @@ import dev.jwx.thebrushwoods.common.block.ElmLeavesBlock;
 import dev.jwx.thebrushwoods.common.block.InfectionVinesBlock;
 import dev.jwx.thebrushwoods.common.block.InfectionVinesPlantBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -16,8 +14,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
@@ -81,6 +77,14 @@ public class BrushwoodsBlocks {
 
     public static final RegistryObject<Block> SILT_BLOCK = registerBlock("silt_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND).sound(SoundType.SOUL_SAND)));
+    public static final RegistryObject<Block> SILTSTONE = registerBlock("siltstone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> SILTSTONE_BRICKS = registerBlock("siltstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> SILTSTONE_TILES = registerBlock("siltstone_tiles",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> POLISHED_SILTSTONE = registerBlock("polished_siltstone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
 
     //ashwood
 
@@ -103,10 +107,10 @@ public class BrushwoodsBlocks {
 
     //lumenella
 
-    public static final RegistryObject<Block> lumenella = registerBlock("lumenella",
+    public static final RegistryObject<Block> LUMENELLA = registerBlock("lumenella",
             () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
                     .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP).lightLevel(lumenellaLight())));
-    public static final RegistryObject<Block> lumenella_lichen = registerBlock("lumenella_lichen",
+    public static final RegistryObject<Block> LUMENELLA_LICHEN = registerBlock("lumenella_lichen",
             () -> new GlowLichenBlock(BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN)
                     .instabreak().noCollission().noOcclusion().sound(SoundType.GLOW_LICHEN).lightLevel(lumenellaLight())));
     //misc
@@ -125,6 +129,8 @@ public class BrushwoodsBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> SERPENTINE_TILES = registerBlock("serpentine_tiles",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> POLISHED_SERPENTINE = registerBlock("polished_serpentine",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
 
     //shale
     public static final RegistryObject<Block> SHALE = registerBlock("shale",
@@ -133,6 +139,9 @@ public class BrushwoodsBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> SHALE_TILES = registerBlock("shale_tiles",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> POLISHED_SHALE = registerBlock("polished_shale",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+
     //end
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
