@@ -43,6 +43,8 @@ public class BrushwoodsSurfaceRuleManager { // Some From Citadel
         registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.VEILED_ABYSS),createVeiledAbyssRules());
         registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.VERDANT_CANOPY),createVerdantCanopyRules());
         registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.VERDANT_SHORE),createVerdantCanopyRules());
+        registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.VERDANT_RIVER),createErmRules());
+        registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.VERDANT_BEACH),createVerdantCanopyRules());
         registerBrushwoodSurfaceRule(SurfaceRules.isBiome(ModBiomes.ERM),createErmRules());
     }
     public static SurfaceRules.RuleSource conditional(SurfaceRules.ConditionSource conditionSource, SurfaceRules.RuleSource ruleSource) {
@@ -63,8 +65,9 @@ public class BrushwoodsSurfaceRuleManager { // Some From Citadel
     }
     public static SurfaceRules.RuleSource createErmRules() {
         SurfaceRules.RuleSource sylvanMoss = conditional(SurfaceRules.ON_FLOOR, SurfaceRules.state(BrushwoodsBlocks.SYLVAN_MOSS.get().defaultBlockState()));
+        SurfaceRules.RuleSource sand = conditional(SurfaceRules.ON_FLOOR, conditional(SurfaceRules.not(SurfaceRules.waterBlockCheck(0,0)), SurfaceRules.state(Blocks.SAND.defaultBlockState())));
         SurfaceRules.RuleSource shale = SurfaceRules.state(BrushwoodsBlocks.SHALE.get().defaultBlockState());
-        return SurfaceRules.sequence(sylvanMoss,shale);
+        return SurfaceRules.sequence(sand,sylvanMoss,shale);
     }
     public static SurfaceRules.RuleSource mergeRules(SurfaceRules.RuleSource prev, List<SurfaceRules.RuleSource> toMerge) {
         ImmutableList.Builder<SurfaceRules.RuleSource> builder = ImmutableList.builder();

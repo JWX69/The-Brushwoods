@@ -5,7 +5,7 @@
   "ore_veins_enabled": false,
   "legacy_random_source": false,
   "default_block": {
-    "Name": "minecraft:stone"
+    "Name": "brushwoods:shale"
   },
   "default_fluid": {
     "Name": "minecraft:water"

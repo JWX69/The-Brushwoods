@@ -3,7 +3,7 @@ package dev.jwx.thebrushwoods;
 import com.mojang.logging.LogUtils;
 import dev.jwx.thebrushwoods.client.render.BrushwoodsRenderer;
 import dev.jwx.thebrushwoods.core.BrushwoodsBlocks;
-import dev.jwx.thebrushwoods.core.BrushwoodsCreateiveModeTabs;
+import dev.jwx.thebrushwoods.core.BrushwoodsCreativeModeTabs;
 import dev.jwx.thebrushwoods.core.BrushwoodsFeatures;
 import dev.jwx.thebrushwoods.core.BrushwoodsItems;
 import dev.jwx.thebrushwoods.world.dimension.BrushwoodsSurfaceRuleManager;
@@ -43,7 +43,7 @@ public class TheBrushwoods {
         BrushwoodsItems.register(modEventBus);
         BrushwoodsFeatures.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
-        BrushwoodsCreateiveModeTabs.register(modEventBus);
+        BrushwoodsCreativeModeTabs.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         ModDimensions.register();
         modEventBus.addListener(this::addCreativeTab);
@@ -56,7 +56,7 @@ public class TheBrushwoods {
         bus.addListener(BrushwoodsSurfaceRuleManager::playerSneak);
     }
     private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTab() == BrushwoodsCreateiveModeTabs.TAB.get()) {
+        if (event.getTab() == BrushwoodsCreativeModeTabs.TAB.get()) {
             event.accept(BrushwoodsBlocks.LUMENELLA.get().asItem());
             for (RegistryObject<Item> object: BrushwoodsItems.ITEMS.getEntries()) {
                 event.accept(object.get());
@@ -67,7 +67,6 @@ public class TheBrushwoods {
         // Some common setup code
         event.enqueueWork(()-> {
             BrushwoodsSurfaceRuleManager.setup();
-            BrushwoodsRenderer.setupSegments();
         });
     }
 
@@ -82,6 +81,7 @@ public class TheBrushwoods {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            BrushwoodsRenderer.setupSegments();
         }
     }
 }
