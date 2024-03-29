@@ -2,16 +2,17 @@ package dev.jwx.thebrushwoods;
 
 import com.mojang.logging.LogUtils;
 import dev.jwx.thebrushwoods.client.render.BrushwoodsRenderer;
-import dev.jwx.thebrushwoods.core.BrushwoodsBlocks;
-import dev.jwx.thebrushwoods.core.BrushwoodsCreateiveModeTabs;
-import dev.jwx.thebrushwoods.core.BrushwoodsFeatures;
-import dev.jwx.thebrushwoods.core.BrushwoodsItems;
+import dev.jwx.thebrushwoods.core.*;
 import dev.jwx.thebrushwoods.world.dimension.BrushwoodsSurfaceRuleManager;
 import dev.jwx.thebrushwoods.world.dimension.ModDimensions;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -48,6 +49,7 @@ public class TheBrushwoods {
         // Register ourselves for server and other game events we are interested in
         BrushwoodsCreateiveModeTabs.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(new BrushwoodEvents());
         ModDimensions.register();
         modEventBus.addListener(this::addCreativeTab);
         subscribeToEvents();
@@ -76,6 +78,7 @@ public class TheBrushwoods {
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
+        event.getServer().registryAccess().registryOrThrow(Registries.LEVEL_STEM).entrySet().forEach(System.out::println);
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

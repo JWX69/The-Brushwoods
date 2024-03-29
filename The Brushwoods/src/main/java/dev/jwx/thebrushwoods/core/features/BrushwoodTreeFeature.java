@@ -2,6 +2,10 @@ package dev.jwx.thebrushwoods.core.features;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import dev.jwx.thebrushwoods.core.BrushwoodsBlocks;
+import dev.jwx.thebrushwoods.core.features.generators.FancyCanopyTreeGenerator;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Vec3i;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
@@ -13,7 +17,9 @@ import net.minecraft.world.level.levelgen.feature.rootplacers.RootPlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
+import net.minecraft.world.phys.Vec3;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -47,9 +53,10 @@ public class BrushwoodTreeFeature extends Feature<BrushwoodTreeFeature.Brushwood
     public BrushwoodTreeFeature(Codec<BrushwoodTreeConfiguration> pCodec) {
         super(pCodec);
     }
+    
     @Override
     public boolean place(FeaturePlaceContext<BrushwoodTreeConfiguration> pContext) {
-        pContext.level().setBlock(pContext.origin(), Blocks.ACACIA_PLANKS.defaultBlockState(), 19);
+        FancyCanopyTreeGenerator.create(pContext.level(), pContext.origin());
         return true;
     }
     
