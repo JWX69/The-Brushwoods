@@ -2,6 +2,9 @@ package dev.jwx.thebrushwoods;
 
 import com.mojang.logging.LogUtils;
 import dev.jwx.thebrushwoods.client.render.BrushwoodsRenderer;
+import dev.jwx.thebrushwoods.core.BrushwoodsBlocks;
+import dev.jwx.thebrushwoods.core.BrushwoodsFeatures;
+import dev.jwx.thebrushwoods.core.BrushwoodsItems;
 import dev.jwx.thebrushwoods.core.*;
 import dev.jwx.thebrushwoods.world.dimension.BrushwoodsSurfaceRuleManager;
 import dev.jwx.thebrushwoods.world.dimension.ModDimensions;
@@ -47,7 +50,7 @@ public class TheBrushwoods {
         BrushwoodsItems.register(modEventBus);
         BrushwoodsFeatures.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
-        BrushwoodsCreateiveModeTabs.register(modEventBus);
+        BrushwoodsCreativeModeTabs.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new BrushwoodEvents());
         ModDimensions.register();
@@ -58,10 +61,11 @@ public class TheBrushwoods {
         IEventBus bus = MinecraftForge.EVENT_BUS;
         bus.addListener(BrushwoodsRenderer::veieldAbbysTick);
         bus.addListener(BrushwoodsRenderer::renderVeiledAbysFog);
+        bus.addListener(BrushwoodsSurfaceRuleManager::playerSneak);
     }
     private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTab() == BrushwoodsCreateiveModeTabs.TAB.get()) {
-            event.accept(BrushwoodsBlocks.lumenella.get().asItem());
+        if (event.getTab() == BrushwoodsCreativeModeTabs.TAB.get()) {
+            event.accept(BrushwoodsBlocks.LUMENELLA.get().asItem());
             for (RegistryObject<Item> object: BrushwoodsItems.ITEMS.getEntries()) {
                 event.accept(object.get());
             }
@@ -71,14 +75,12 @@ public class TheBrushwoods {
         // Some common setup code
         event.enqueueWork(()-> {
             BrushwoodsSurfaceRuleManager.setup();
-            BrushwoodsRenderer.setupSegments();
         });
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        event.getServer().registryAccess().registryOrThrow(Registries.LEVEL_STEM).entrySet().forEach(System.out::println);
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -87,6 +89,7 @@ public class TheBrushwoods {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            BrushwoodsRenderer.setupSegments();
         }
     }
 }

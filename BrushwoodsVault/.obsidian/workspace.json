@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Brushwoods/Mobs/Beast of the abyss.md",
+                "file": "Brushwoods/Biomes/Verdant Canopy.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Brushwoods/Mobs/Beast of the abyss.md",
+                "file": "Brushwoods/Biomes/Verdant Canopy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Brushwoods/Mobs/Beast of the abyss.md",
+                "file": "Brushwoods/Biomes/Verdant Canopy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Brushwoods/Mobs/Beast of the abyss.md"
+                "file": "Brushwoods/Biomes/Verdant Canopy.md"
               }
             }
           },
@@ -159,20 +159,21 @@
   },
   "active": "28b3924f0544388a",
   "lastOpenFiles": [
-    "Brushwoods/Images/beast.gif",
+    "Brushwoods/Biomes/Sludge Grotto.md",
+    "Brushwoods/Biomes/Veiled Abyss.md",
+    "Brushwoods/Biomes/Verdant Canopy.md",
+    "Brushwoods/Biomes/Submerged Meadow.md",
+    "Brushwoods/Biomes/Sludge Marsh.md",
+    "Brushwoods/Biomes/Root Caves.md",
+    "Brushwoods/Biomes/Fungal Grove.md",
     "Brushwoods/Mobs/Beast of the abyss.md",
+    "Notes.md",
+    "Brushwoods/Images/beast.gif",
     "Brushwoods/Images/Marsh.png",
     "Brushwoods/Images/2024-03-26_15.29.35 1.png",
     "Brushwoods/Images/beast of the abyss.png",
-    "Brushwoods/Biomes/Veiled Abyss.md",
-    "Brushwoods/Biomes/Verdant Canopy.md",
     "Brushwoods/Images/Veiled Abyss 1.png",
     "Brushwoods/Images/Marsh&Grotto.png",
-    "Brushwoods/Biomes/Submerged Meadow.md",
-    "Brushwoods/Biomes/Sludge Marsh.md",
-    "Brushwoods/Biomes/Sludge Grotto.md",
-    "Brushwoods/Biomes/Root Caves.md",
-    "Brushwoods/Biomes/Fungal Grove.md",
     "Brushwoods/Mobs/Woodland Sprite.md",
     "Brushwoods/Mobs/Dull Sprite.md",
     "Brushwoods/Blocks - Other/Shadow thorn.md",
