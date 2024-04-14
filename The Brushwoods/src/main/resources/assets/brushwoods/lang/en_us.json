@@ -31,5 +31,9 @@
   "block.brushwoods.polished_shale": "Polished Shale",
   "block.brushwoods.shale_bricks": "Shale Bricks",
   "block.brushwoods.shale_tiles": "Shale Tiles",
+  "block.brushwoods.rustcap": "Rustcap",
+  "block.brushwoods.rustcap_stem": "Rustcap Stem",
+  "block.brushwoods.rustcap_crown": "Rustcap Crown",
+  "block.brushwoods.rustcap_block": "Rustcap Block",
   "creativemodetab.brushwoods": "The Brushwoods"
 }

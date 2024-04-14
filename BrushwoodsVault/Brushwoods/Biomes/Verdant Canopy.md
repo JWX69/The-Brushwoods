@@ -10,5 +10,5 @@ These Woodland Sprites, curious and gentle by nature, may offer assistance, shar
 	- The trees that create the cannopy are Elm Trees
 	- The rocks scattered around are made of Serpentine
 
-![[render 1.png]]![[verdant_canopy.png]]
+![[2024-03-27_18.png]]![[render 1.png]]
 ![[2024-03-26_15.29.35 1.png]]

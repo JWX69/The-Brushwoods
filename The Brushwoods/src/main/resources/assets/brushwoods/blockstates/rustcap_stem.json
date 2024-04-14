@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "brushwoods:block/rustcap_stem_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "brushwoods:block/rustcap_stem"
+    },
+    "axis=z": {
+      "model": "brushwoods:block/rustcap_stem_horizontal",
+      "x": 90
+    }
+  }
+}

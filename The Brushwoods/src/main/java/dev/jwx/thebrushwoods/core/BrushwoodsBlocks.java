@@ -4,6 +4,7 @@ import dev.jwx.thebrushwoods.TheBrushwoods;
 import dev.jwx.thebrushwoods.common.block.ElmLeavesBlock;
 import dev.jwx.thebrushwoods.common.block.InfectionVinesBlock;
 import dev.jwx.thebrushwoods.common.block.InfectionVinesPlantBlock;
+import dev.jwx.thebrushwoods.common.block.WillowRootsBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -30,17 +31,14 @@ public class BrushwoodsBlocks {
     //BLOCKS REGISTRY
 
     public static final RegistryObject<Block> INFECTION = registerBlock("infection",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)
                     .strength(1.2f,6f).sound(SoundType.HARD_CROP)));
-
     public static final RegistryObject<Block> INFECTION_ROOTS = registerBlock("infection_roots",
             () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)
                     .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)));
-
     public static final RegistryObject<Block> INFECTION_VINES = registerBlock("infection_vines",
             () -> new InfectionVinesBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)
                     .instabreak().noCollission().sound(SoundType.HARD_CROP)));
-
     public static final RegistryObject<Block> INFECTION_VINES_PLANT = registerBlockNoItem("infection_vines_plant",
             () -> new InfectionVinesPlantBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)
                     .instabreak().noCollission().sound(SoundType.HARD_CROP)));
@@ -54,19 +52,27 @@ public class BrushwoodsBlocks {
     public static final RegistryObject<Block> SMALL_AGARICUS = registerBlock("small_agaricus",
             () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
                     .instabreak().noCollission().sound(SoundType.HARD_CROP)));
-
     public static final RegistryObject<Block> LARGE_AGARICUS = registerBlock("large_agaricus",
             () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
                     .instabreak().noCollission().sound(SoundType.HARD_CROP)));
+
+    //Rustcap
+    public static final RegistryObject<Block> RUSTCAP = registerBlock("rustcap",
+            () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
+                    .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)));
+    public static final RegistryObject<Block> RUSTCAP_STEM = registerBlock("rustcap_stem",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> RUSTCAP_CROWN = registerBlock("rustcap_crown",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM_BLOCK).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> RUSTCAP_BLOCK = registerBlock("rustcap_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM_BLOCK).sound(SoundType.WOOD)));
 
     //gloomstone
 
     public static final RegistryObject<Block> GLOOMSTONE = registerBlock("gloomstone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
-
     public static final RegistryObject<Block> GLOOMSTONE_BRICKS = registerBlock("gloomstone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
-
     public static final RegistryObject<Block> ROOTED_GLOOMSTONE_BRICKS = registerBlock("rooted_gloomstone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
 
@@ -90,7 +96,6 @@ public class BrushwoodsBlocks {
 
     public static final RegistryObject<Block> ASHWOOD_PLANKS = registerBlock("ashwood_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));
-
     public static final RegistryObject<Block> ASHWOOD_LOG = registerBlock("ashwood_log",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
 
@@ -98,15 +103,24 @@ public class BrushwoodsBlocks {
 
     public static final RegistryObject<Block> ELM_PLANKS = registerBlock("elm_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));
-
     public static final RegistryObject<Block> ELM_LOG = registerBlock("elm_log",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
-
     public static final RegistryObject<Block> ELM_LEAVES = registerBlock("elm_leaves",
             () -> new ElmLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.2F).noOcclusion().sound(SoundType.AZALEA_LEAVES)));
 
-    //lumenella
+    //willow
+    public static final RegistryObject<Block> WILLOW_PLANKS = registerBlock("willow_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> WILLOW_LOG = registerBlock("willow_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> WILLOW_WOOD = registerBlock("willow_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.2F).noOcclusion().sound(SoundType.AZALEA_LEAVES)));
+    public static final RegistryObject<Block> WILLOW_ROOTS = registerBlock("willow_roots",
+            () -> new WillowRootsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(0.3F).noOcclusion().sound(SoundType.WOOD)));
 
+    //lumenella
     public static final RegistryObject<Block> LUMENELLA = registerBlock("lumenella",
             () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
                     .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP).lightLevel(lumenellaLight())));
@@ -141,6 +155,7 @@ public class BrushwoodsBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
     public static final RegistryObject<Block> POLISHED_SHALE = registerBlock("polished_shale",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
+
 
     //end
 

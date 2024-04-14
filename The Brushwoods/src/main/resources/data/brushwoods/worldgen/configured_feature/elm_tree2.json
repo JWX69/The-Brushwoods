@@ -1,5 +1,5 @@
 {
-  "type": "brushwoods:brushwood_tree",
+  "type": "brushwoods:elm_tree",
   "config": {
     "minimum_size": {
       "type": "minecraft:two_layers_feature_size"

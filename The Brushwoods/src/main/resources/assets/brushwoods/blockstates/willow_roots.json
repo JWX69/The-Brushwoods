@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "brushwoods:block/willow_roots",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "brushwoods:block/willow_roots",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "brushwoods:block/willow_roots"
+    },
+    "facing=west": {
+      "model": "brushwoods:block/willow_roots",
+      "y": 90
+    }
+  }
+}

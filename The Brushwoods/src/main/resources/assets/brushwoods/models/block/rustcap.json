@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "brushwoods:block/rustcap"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "brushwoods:block/rustcap_stem_top",
+    "side": "brushwoods:block/rustcap_stem"
+  }
+}
