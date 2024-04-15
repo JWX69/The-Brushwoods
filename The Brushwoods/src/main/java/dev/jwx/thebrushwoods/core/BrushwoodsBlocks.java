@@ -80,7 +80,6 @@ public class BrushwoodsBlocks {
 
     public static final RegistryObject<Block> SILT = registerBlock("silt",
             () -> new SnowLayerBlock(BlockBehaviour.Properties.copy(Blocks.SAND).sound(SoundType.SOUL_SAND)));
-
     public static final RegistryObject<Block> SILT_BLOCK = registerBlock("silt_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SAND).sound(SoundType.SOUL_SAND)));
     public static final RegistryObject<Block> SILTSTONE = registerBlock("siltstone",
@@ -118,7 +117,7 @@ public class BrushwoodsBlocks {
     public static final RegistryObject<Block> WILLOW_LEAVES = registerBlock("willow_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).strength(0.2F).noOcclusion().sound(SoundType.AZALEA_LEAVES)));
     public static final RegistryObject<Block> WILLOW_ROOTS = registerBlock("willow_roots",
-            () -> new WillowRootsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(0.3F).noOcclusion().sound(SoundType.WOOD)));
+            () -> new WillowRootsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(0.3F).noOcclusion().noCollission().sound(SoundType.WOOD)));
 
     //lumenella
     public static final RegistryObject<Block> LUMENELLA = registerBlock("lumenella",

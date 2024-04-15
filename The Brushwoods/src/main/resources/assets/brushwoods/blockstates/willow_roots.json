@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,up=false": {
       "model": "brushwoods:block/willow_roots",
       "y": 270
     },
-    "facing=north": {
+    "facing=east,up=true": {
+      "model": "brushwoods:block/willow_roots_flip",
+      "y": 270
+    },
+    "facing=north,up=false": {
       "model": "brushwoods:block/willow_roots",
       "y": 180
     },
-    "facing=south": {
+    "facing=north,up=true": {
+      "model": "brushwoods:block/willow_roots_flip",
+      "y": 180
+    },
+    "facing=south,up=false": {
       "model": "brushwoods:block/willow_roots"
     },
-    "facing=west": {
+    "facing=south,up=true": {
+      "model": "brushwoods:block/willow_roots_flip"
+    },
+    "facing=west,up=false": {
       "model": "brushwoods:block/willow_roots",
+      "y": 90
+    },
+    "facing=west,up=true": {
+      "model": "brushwoods:block/willow_roots_flip",
       "y": 90
     }
   }
