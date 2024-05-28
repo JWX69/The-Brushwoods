@@ -161,6 +161,10 @@ repositories {
                 includeGroup "maven.modrinth"
             }
         }
+        maven {
+            name = 'BlameJared Maven (CrT / Bookshelf)'
+            url = 'https://maven.blamejared.com'
+        }
     }
 }
 
@@ -169,6 +173,8 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    implementation fg.deobf("foundry.veil:Veil-forge-${project.minecraft_version}:${project.veil_version}") { transitive = false }
+
 
     // Dev QOL
     runtimeOnly fg.deobf("curse.maven:worldedit-225608:4586218")

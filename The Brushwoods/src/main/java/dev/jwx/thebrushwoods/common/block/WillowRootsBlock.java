@@ -16,15 +16,17 @@ public class WillowRootsBlock extends Block {
     public static final BooleanProperty UP;
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(new Property[]{FACING});
-        pBuilder.add(new Property[]{UP});
+        pBuilder.add(FACING, UP);
     }
+
     public WillowRootsBlock(Properties pProperties) {
         super(pProperties);
     }
+
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite()).setValue(UP, pContext.getNearestLookingVerticalDirection()==Direction.UP);
+        return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite()).setValue(UP, pContext.getNearestLookingVerticalDirection() == Direction.UP);
     }
+
     static {
         FACING = BlockStateProperties.HORIZONTAL_FACING;
         UP = BlockStateProperties.UP;

@@ -5,8 +5,11 @@
       "x": 90,
       "y": 90
     },
-    "axis=y": {
+    "axis=y,top=false": {
       "model": "brushwoods:block/rustcap_stem"
+    },
+    "axis=y,top=true": {
+      "model": "brushwoods:block/rustcap_stem_end"
     },
     "axis=z": {
       "model": "brushwoods:block/rustcap_stem_horizontal",

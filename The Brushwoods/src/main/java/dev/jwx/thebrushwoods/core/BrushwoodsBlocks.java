@@ -1,10 +1,7 @@
 package dev.jwx.thebrushwoods.core;
 
 import dev.jwx.thebrushwoods.TheBrushwoods;
-import dev.jwx.thebrushwoods.common.block.ElmLeavesBlock;
-import dev.jwx.thebrushwoods.common.block.InfectionVinesBlock;
-import dev.jwx.thebrushwoods.common.block.InfectionVinesPlantBlock;
-import dev.jwx.thebrushwoods.common.block.WillowRootsBlock;
+import dev.jwx.thebrushwoods.common.block.*;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -61,7 +58,7 @@ public class BrushwoodsBlocks {
             () -> new RootsBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM)
                     .instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.HARD_CROP)));
     public static final RegistryObject<Block> RUSTCAP_STEM = registerBlock("rustcap_stem",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).sound(SoundType.WOOD)));
+            () -> new BrushwoodsStemBlock(BlockBehaviour.Properties.copy(Blocks.MUSHROOM_STEM).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> RUSTCAP_CROWN = registerBlock("rustcap_crown",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM_BLOCK).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> RUSTCAP_BLOCK = registerBlock("rustcap_block",
