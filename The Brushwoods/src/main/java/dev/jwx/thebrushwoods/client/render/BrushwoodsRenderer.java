@@ -12,7 +12,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.FogRenderer;
 import net.minecraft.client.renderer.GameRenderer;
-import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
@@ -213,17 +212,17 @@ public class BrushwoodsRenderer{
         public static int mainChunkX = 0;
         public static int mainChunkZ = 0;
     }
-    public static AbyssFogSegment[] abyysFogSegments = new AbyssFogSegment[9];
+    public static AbyssFogSegment[] abyssFogSegments = new AbyssFogSegment[9];
     public static void setupSegments() {
-        abyysFogSegments[0] = new AbyssFogSegment(-100,-100);
-        abyysFogSegments[1] = new AbyssFogSegment(-100,0);
-        abyysFogSegments[2] = new AbyssFogSegment(-100,100);
-        abyysFogSegments[3] = new AbyssFogSegment(0,-100);
-        abyysFogSegments[4] = new AbyssFogSegment(0,0);
-        abyysFogSegments[5] = new AbyssFogSegment(0,100);
-        abyysFogSegments[6] = new AbyssFogSegment(100,-100);
-        abyysFogSegments[7] = new AbyssFogSegment(100,0);
-        abyysFogSegments[8] = new AbyssFogSegment(100,100);
+        abyssFogSegments[0] = new AbyssFogSegment(-100,-100);
+        abyssFogSegments[1] = new AbyssFogSegment(-100,0);
+        abyssFogSegments[2] = new AbyssFogSegment(-100,100);
+        abyssFogSegments[3] = new AbyssFogSegment(0,-100);
+        abyssFogSegments[4] = new AbyssFogSegment(0,0);
+        abyssFogSegments[5] = new AbyssFogSegment(0,100);
+        abyssFogSegments[6] = new AbyssFogSegment(100,-100);
+        abyssFogSegments[7] = new AbyssFogSegment(100,0);
+        abyssFogSegments[8] = new AbyssFogSegment(100,100);
     }
     public static void renderVeiledAbysFog(RenderLevelStageEvent event) {
         if (event.getStage()  != RenderLevelStageEvent.Stage.AFTER_WEATHER || Minecraft.getInstance().level.dimension() != ModDimensions.BW_KEY)
@@ -244,7 +243,7 @@ public class BrushwoodsRenderer{
 //        (poseStack).translate(camPos.x,camPos.y, camPos.z);
         if (camera.getPosition().y > -1) {
             for (float i = -7; i < 0; i = i + .151f) {
-                for (AbyssFogSegment fogSegment : abyysFogSegments) {
+                for (AbyssFogSegment fogSegment : abyssFogSegments) {
                     RenderSystem.setShaderColor(fogBrightness, fogBrightness, fogBrightness, Math.min(1, Math.abs((i + 5) / 14)));
                     Entity cameraEntity = Minecraft.getInstance().cameraEntity;
 
@@ -277,7 +276,7 @@ public class BrushwoodsRenderer{
         }
         if (camera.getPosition().y < 9) {
             for (float i = -5; i < 0; i = i + .151f) {
-                for (AbyssFogSegment fogSegment : abyysFogSegments) {
+                for (AbyssFogSegment fogSegment : abyssFogSegments) {
                     RenderSystem.setShaderColor(fogBrightness, fogBrightness, fogBrightness, Math.min(1, Math.abs((i + 5) / 14)));
                     Entity cameraEntity = Minecraft.getInstance().cameraEntity;
 

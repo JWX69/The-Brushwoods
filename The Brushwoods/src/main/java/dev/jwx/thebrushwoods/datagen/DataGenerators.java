@@ -29,5 +29,6 @@ public class DataGenerators {
 
         BrushwoodsBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
                 new BrushwoodsBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new BrushwoodsItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter()));
     }
 }
