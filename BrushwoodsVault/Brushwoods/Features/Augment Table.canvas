@@ -6,7 +6,7 @@
 		{"id":"84614d322c2b525e","type":"text","text":"The Shroud Sak can be attached to bows and shields to create clouds of fog when attacked/attacking.","x":-120,"y":-230,"width":300,"height":90,"color":"3"},
 		{"id":"c604f397cacc7724","type":"text","text":"[[Shade Crystals]] can be attached to swords to inflict short amounts of darkness to enemy's.","x":-120,"y":-336,"width":300,"height":93,"color":"6"},
 		{"id":"6210e66a49cfe33c","type":"file","file":"Brushwoods/Features/Augment Table.md","x":-700,"y":-320,"width":240,"height":500,"color":"#ffffff"},
-		{"id":"f4516371ba6bf430","type":"text","text":" # **VAULTED**","x":-420,"y":-105,"width":236,"height":70,"color":"1"}
+		{"id":"f4516371ba6bf430","type":"text","text":" # **VAULTED**","x":-420,"y":0,"width":236,"height":80,"color":"1"}
 	],
 	"edges":[
 		{"id":"343e6eefca93e063","fromNode":"f263bf03873c8a65","fromSide":"right","toNode":"e877e16deb7d3e08","toSide":"left"},

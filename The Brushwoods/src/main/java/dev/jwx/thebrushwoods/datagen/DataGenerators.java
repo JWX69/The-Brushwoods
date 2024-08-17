@@ -21,5 +21,13 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeServer(), new BrushwoodsWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new BrushwoodsRecipeProvider(packOutput));
+        generator.addProvider(event.includeServer(), BrushwoodsLootTableProvider.create(packOutput));
+
+        generator.addProvider(event.includeClient(), new BrushwoodsBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new BrushwoodsItemModelProvider(packOutput, existingFileHelper));
+
+        BrushwoodsBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
+                new BrushwoodsBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
     }
 }

@@ -11,15 +11,4 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class BrushwoodEvents {
     
-    @SubscribeEvent
-    public void onPlayerInteractEvent(PlayerInteractEvent event) {
-        if (event.getEntity().isCrouching() && event.getLevel() instanceof ServerLevelAccessor serverLevel) {
-            System.out.println("h");
-            FancyCanopyTreeGenerator.create(serverLevel, toBlockPos(event.getEntity().getPosition(0).add(10, 0, 10)));
-        }
-    }
-    private static BlockPos toBlockPos(Vec3 vec3) {
-        return new BlockPos((int) vec3.x, (int) vec3.y, (int) vec3.z);
-    }
-    
 }

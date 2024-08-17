@@ -1,0 +1,1 @@
+Crag whales are believed to be clouds accumulated upon the bottom of a fossilized scale of an ancient serpent 

@@ -1,7 +1,6 @@
 {
-	"credit": "Made By @JdoubleX in Blockbench",
 	"parent": "minecraft:block/leaves",
-	"render_type": "cutout",
+	"render_type": "minecraft:cutout",
 	"textures": {
 		"all": "brushwoods:block/willow_leaves"
 	}

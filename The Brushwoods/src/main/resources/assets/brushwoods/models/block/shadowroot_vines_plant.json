@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "brushwoods:block/shadowroot_vines_plant"
+  },
+  "render_type": "cutout"
+}

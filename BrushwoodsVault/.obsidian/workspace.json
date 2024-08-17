@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8101ad15b6df8d27",
+        "id": "97042c25b2dc1292",
         "type": "tabs",
         "children": [
           {
-            "id": "310c1f39a5d26f13",
+            "id": "08184246c8cbb44a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Brushwoods/Mobs/Stratos Whales.md",
+                "file": "Brushwoods/Blocks - Other/Shadow thorn.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Brushwoods/Mobs/Stratos Whales.md",
+                "file": "Brushwoods/Blocks - Other/Shadow thorn.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Brushwoods/Mobs/Stratos Whales.md",
+                "file": "Brushwoods/Blocks - Other/Shadow thorn.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Brushwoods/Mobs/Stratos Whales.md"
+                "file": "Brushwoods/Blocks - Other/Shadow thorn.md"
               }
             }
           },
@@ -157,47 +157,48 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "310c1f39a5d26f13",
+  "active": "08184246c8cbb44a",
   "lastOpenFiles": [
-    "Pasted image 20240704015644.png",
-    "Brushwoods/Biomes/Root Caves.md",
-    "Brushwoods/Biomes/Fungal Grove.md",
-    "Brushwoods/Blocks - Other/Ashwood.md",
-    "Brushwoods/Blocks - Other/Elm Wood.md",
-    "Brushwoods/Biomes/Verdant Canopy.md",
-    "Brushwoods/Biomes/Sludge Grotto.md",
-    "Brushwoods/Biomes/Sludge Marsh.md",
-    "Brushwoods/Features/Augment Table.canvas",
-    "Brushwoods/Features/Augment Table.md",
-    "Brushwoods/Blocks - Other/Shade Crystals.md",
-    "Brushwoods/Blocks - Other/Shadow thorn.md",
+    "Brushwoods/Blocks - Other/Shadowroot.md",
     "Brushwoods/Orbit.md",
-    "Brushwoods/Mobs/moss back.md",
-    "Brushwoods/Mobs/Poddle.md",
-    "Brushwoods/Mobs/Woodland Sprite.md",
-    "Brushwoods/Mobs/Dull Sprite.md",
-    "Brushwoods/Mobs/Beast of the abyss.md",
-    "Brushwoods/Mobs/Stratos Whales.md",
+    "Brushwoods/Biomes/Verdant Canopy.md",
     "Brushwoods/Biomes/Veiled Abyss.md",
     "Brushwoods/Biomes/Submerged Meadow.md",
+    "Brushwoods/Biomes/Sludge Marsh.md",
+    "Brushwoods/Biomes/Sludge Grotto.md",
+    "Brushwoods/Biomes/Root Caves.md",
+    "Brushwoods/Biomes/Fungal Grove.md",
+    "Brushwoods/Features/Augment Table.canvas",
     "Brushwoods/Brushwoods Dimension.md",
-    "Pasted image 20240703185327.png",
-    "Pasted image 20240703172828.png",
+    "Brushwoods/Blocks - Other/Elm Wood.md",
+    "Brushwoods/Blocks - Other/Ashwood.md",
+    "Notes.md",
+    "things.md",
+    "Brushwoods/Images/Pasted image 20240704015644.png",
+    "Brushwoods/Images/Pasted image 20240703185327.png",
+    "Brushwoods/Images/Pasted image 20240703172828.png",
+    "2024-04-01.md",
+    "Brushwoods/Features/Shroudpods.md",
+    "Brushwoods/Blocks - Other/Shadow thorn.md",
+    "Brushwoods/Lore & World Building/Myths and Stories/The Crag Whales Origin.md",
+    "Brushwoods/Blocks - Other/Gloomstone.md",
+    "Brushwoods/Lore & World Building/Myths and Stories",
+    "Brushwoods/Lore & World Building",
+    "Brushwoods/Mobs/Crag Back.md",
+    "Brushwoods/Mobs/Woodland Sprite.md",
+    "Brushwoods/Mobs/Poddle.md",
+    "Brushwoods/Mobs/moss back.md",
+    "Brushwoods/Blocks - Other/Shade Crystals.md",
+    "Brushwoods/Features/Augment Table.md",
     "Brushwoods/Images/Pasted image 20240414120818.png",
     "Brushwoods/Images/Pasted image 20240414150851.png",
     "Pasted image 20240414150425.png",
     "Pasted image 20240414115838.png",
-    "Brushwoods/Blocks - Other/Silt.md",
-    "Scorched Lands/Scorched Lands Dimension.md",
-    "Notes.md",
-    "2024-04-01.md",
     "Brushwoods/Images/2024-03-27_18.png",
     "Scorched Lands",
-    "things.md",
     "Untitled.canvas",
     "Brushwoods/Images/beast.gif",
     "Brushwoods/Images/Marsh.png",
-    "Brushwoods/Images/2024-03-26_15.29.35 1.png",
     "Items",
     "Brushwoods/Features"
   ]

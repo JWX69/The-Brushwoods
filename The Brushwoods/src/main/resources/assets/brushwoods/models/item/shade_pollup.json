@@ -1,0 +1,6 @@
+{
+  "parent": "brushwoods:block/shade_pollup",
+  "textures": {
+    "layer0": "brushwoods:block/shade_pollup"
+  }
+}

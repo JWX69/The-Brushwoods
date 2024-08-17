@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "brushwoods:block/ashwood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "brushwoods:block/ashwood"
+    },
+    "axis=z": {
+      "model": "brushwoods:block/ashwood_horizontal",
+      "x": 90
+    }
+  }
+}

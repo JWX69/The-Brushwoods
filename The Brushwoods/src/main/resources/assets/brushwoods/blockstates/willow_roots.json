@@ -1,33 +1,123 @@
 {
   "variants": {
-    "facing=east,up=false": {
+    "facing=east,up=false,bottom=true,top=true": {
       "model": "brushwoods:block/willow_roots",
       "y": 270
     },
-    "facing=east,up=true": {
+    "facing=east,up=false,bottom=true,top=false": {
+      "model": "brushwoods:block/willow_roots_bottom",
+      "y": 270
+    },
+    "facing=east,up=false,bottom=false,top=false": {
+      "model": "brushwoods:block/willow_roots_mid",
+      "y": 270
+    },
+    "facing=east,up=false,bottom=false,top=true": {
+      "model": "brushwoods:block/willow_roots_top",
+      "y": 270
+    },
+    "facing=east,up=true,bottom=true,top=true": {
       "model": "brushwoods:block/willow_roots_flip",
       "y": 270
     },
-    "facing=north,up=false": {
+    "facing=east,up=true,bottom=false,top=true": {
+      "model": "brushwoods:block/willow_roots_bottom_flip",
+      "y": 270
+    },
+    "facing=east,up=true,bottom=false,top=false": {
+      "model": "brushwoods:block/willow_roots_mid_flip",
+      "y": 270
+    },
+    "facing=east,up=true,bottom=true,top=false": {
+      "model": "brushwoods:block/willow_roots_top_flip",
+      "y": 270
+    },
+    "facing=north,up=false,bottom=true,top=true": {
       "model": "brushwoods:block/willow_roots",
       "y": 180
     },
-    "facing=north,up=true": {
+    "facing=north,up=false,bottom=true,top=false": {
+      "model": "brushwoods:block/willow_roots_bottom",
+      "y": 180
+    },
+    "facing=north,up=false,bottom=false,top=false": {
+      "model": "brushwoods:block/willow_roots_mid",
+      "y": 180
+    },
+    "facing=north,up=false,bottom=false,top=true": {
+      "model": "brushwoods:block/willow_roots_top",
+      "y": 180
+    },
+    "facing=north,up=true,bottom=true,top=true": {
       "model": "brushwoods:block/willow_roots_flip",
       "y": 180
     },
-    "facing=south,up=false": {
+    "facing=north,up=true,bottom=false,top=true": {
+      "model": "brushwoods:block/willow_roots_bottom_flip",
+      "y": 180
+    },
+    "facing=north,up=true,bottom=false,top=false": {
+      "model": "brushwoods:block/willow_roots_mid_flip",
+      "y": 180
+    },
+    "facing=north,up=true,bottom=true,top=false": {
+      "model": "brushwoods:block/willow_roots_top_flip",
+      "y": 180
+    },
+    "facing=south,up=false,bottom=true,top=true": {
       "model": "brushwoods:block/willow_roots"
     },
-    "facing=south,up=true": {
+    "facing=south,up=false,bottom=true,top=false": {
+      "model": "brushwoods:block/willow_roots_bottom"
+    },
+    "facing=south,up=false,bottom=false,top=false": {
+      "model": "brushwoods:block/willow_roots_mid"
+    },
+    "facing=south,up=false,bottom=false,top=true": {
+      "model": "brushwoods:block/willow_roots_top"
+    },
+    "facing=south,up=true,bottom=true,top=true": {
       "model": "brushwoods:block/willow_roots_flip"
     },
-    "facing=west,up=false": {
+    "facing=south,up=true,bottom=false,top=true": {
+      "model": "brushwoods:block/willow_roots_bottom_flip"
+    },
+    "facing=south,up=true,bottom=false,top=false": {
+      "model": "brushwoods:block/willow_roots_mid_flip"
+    },
+    "facing=south,up=true,bottom=true,top=false": {
+      "model": "brushwoods:block/willow_roots_top_flip"
+    },
+    "facing=west,up=false,bottom=true,top=true": {
       "model": "brushwoods:block/willow_roots",
       "y": 90
     },
-    "facing=west,up=true": {
+    "facing=west,up=false,bottom=true,top=false": {
+      "model": "brushwoods:block/willow_roots_bottom",
+      "y": 90
+    },
+    "facing=west,up=false,bottom=false,top=false": {
+      "model": "brushwoods:block/willow_roots_mid",
+      "y": 90
+    },
+    "facing=west,up=false,bottom=false,top=true": {
+      "model": "brushwoods:block/willow_roots_top",
+      "y": 90
+    },
+    "facing=west,up=true,bottom=true,top=true": {
       "model": "brushwoods:block/willow_roots_flip",
+      "y": 90
+    },
+    "facing=west,up=true,bottom=false,top=true": {
+      "model": "brushwoods:block/willow_roots_bottom_flip",
+      "y": 90
+    },
+    "facing=west,up=true,bottom=false,top=false": {
+      "model": "brushwoods:block/willow_roots_mid_flip",
+      "y": 90
+    },
+    "facing=west,up=true,bottom=true,top=false": {
+      "model": "brushwoods:block/willow_roots_top_flip",
       "y": 90
     }
   }

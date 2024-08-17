@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "bottom=true,top=true": {
+      "model": "brushwoods:block/siltstone_trim"
+    },
+    "bottom=true,top=false": {
+      "model": "brushwoods:block/siltstone_trim_bottom"
+    },
+    "bottom=false,top=false": {
+      "model": "brushwoods:block/siltstone_trim_mid"
+    },
+    "bottom=false,top=true": {
+      "model": "brushwoods:block/siltstone_trim_top"
+    }
+  }
+}

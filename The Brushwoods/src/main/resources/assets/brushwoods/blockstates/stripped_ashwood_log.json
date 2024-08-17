@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "axis=x": [
+      {
+        "model": "brushwoods:block/stripped_ashwood_log_horizontal",
+        "x": 90,
+        "y": 90,
+        "weight": 5
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "brushwoods:block/stripped_ashwood_log",
+        "weight": 5
+      }
+      ],
+      "axis=z": [
+        {
+          "model": "brushwoods:block/stripped_ashwood_log_horizontal",
+          "x": 90,
+          "weight": 5
+        }
+      ]
+    }
+  }
